@@ -1,0 +1,48 @@
+html {
+    background-color: #020b0a;
+    font-family: Arial, Helvetica, Tahoma, sans-serif;
+}
+
+#playground {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#center {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+#controls {
+    position: fixed;
+    left: 0;
+    top: 10px;
+    background-color: #020b0a;
+    padding: 1em;
+    z-index: 50000;
+    border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    box-shadow: 0 2px 5px black;
+}
+
+#controls a {display:block; text-decoration:none; color:white; padding: 5px 0;}
+
+
+#center > img {
+    margin: -386px 0 0 -423px;
+}
+
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
