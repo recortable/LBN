@@ -1,6 +1,8 @@
 html {
     background-color: #020b0a;
     font-family: Arial, Helvetica, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #f6cb9f;
 }
 
 #playground {
@@ -32,7 +34,7 @@ html {
     box-shadow: 0 2px 5px black;
 }
 
-#controls a {display:block; text-decoration:none; color:white; padding: 5px 0;}
+#controls a {display:block; text-decoration:none; color: white; padding: 5px 0;}
 
 
 #center > img {
