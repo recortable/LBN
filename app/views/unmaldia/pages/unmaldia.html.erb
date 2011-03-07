@@ -1,23 +1,8 @@
-<div id="controls" style="display:none;">
-  <%= link_to 'Las Buenas Noches' %>
-  <%= link_to 'Aventuras Domésticas' %>
-  <%= link_to 'Un Mal Día' %>
-  <%= link_to 'Vídeos' %>
-  <%= link_to 'Comentar' %>
-  <%= link_to 'Facebook' %>
-  <div><br/>Próximos conciertos: .....</div>
-</div>
-
-<div id="player" style="display:none;">
-  <object data="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="150" height="450"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//"><param name="quality" value="high"><param name="allowNetworking" value="always"><param name="wmode" value="transparent"><param name="bgcolor" value="#020b0a"><param name="allowScriptAccess" value="never"><object data="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//" type="text/html" width="150" height="450"></object></object>
-</div>
+<%= render :partial => 'controls' %>
 
 
-<div id="playground" unselectable="on" class="unselectable" style="display:none;">
-  <div id="draggable" style="width: 3544px; height:1772px;" data-position="leftTop">
-    <img src="/images/canciones.jpg" alt="Portada" width="3544" height="1772"/>
+<div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
+  <div id="draggable" style="width: 2559px; height:1240px;" data-position="leftTop">
+    <img src="/images/interior.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2559" height="1240"/>
   </div>
-</div>
-<div id="center">
-  <%= image_tag('unmaldia.jpg', :alt => 'un mal día (lo tiene cualquiera)', :width => 847, :height => 773) %>
 </div>

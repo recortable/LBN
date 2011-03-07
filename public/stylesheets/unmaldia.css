@@ -14,13 +14,43 @@ html {
     overflow: hidden;
 }
 
-#center {
+#draggable {
+    position:relative;
+    z-index: 500;
+}
+
+#playground a {
+    position:absolute;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden; text-indent:-1000px;
+    z-index:1000;
+}
+
+#playground a:hover {
+    border: 10px solid rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+#unmaldia-canciones {
+    left: 360px; width: 420px;
+    top: 580px; height: 600px;
+}
+
+#unmaldia-interior {
+    left: 1620px; top: 40px;
+    width: 520px; height: 280px;
+}
+
+#loading {
     position: fixed;
     left: 50%;
     top: 50%;
     width: 50%;
     height: 50%;
 }
+
 
 #controls {
     position: fixed;

@@ -13,21 +13,28 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     function initPlayground() {
         if (!initialized) {
             initialized = true;
-            $("#center").fadeOut(2000, function() {
-                $("#center").remove();
-
-                draggable.css({top: 0, left: 0});
-                draggable.css({cursor: 'move'});
-                setupDraggable(draggable.attr('data-position'));
-                $(window).resize(function() {
-                    if (draggable != null) setupDraggable(null);
+            if ($("#loading").is(":visible"))
+                $("#loading").fadeOut(2000, function() {
+                    showPlayground();
                 });
-                playground.fadeIn();
-                $("#controls").fadeIn();
-                $("#player").fadeIn();
-            });
+            else
+                showPlayground();
 
         }
+    }
+
+    function showPlayground() {
+        $("#loading").remove();
+
+        draggable.css({top: 0, left: 0});
+        draggable.css({cursor: 'move'});
+        setupDraggable(draggable.attr('data-position'));
+        $(window).resize(function() {
+            if (draggable != null) setupDraggable(null);
+        });
+        playground.fadeIn();
+        $("#controls").fadeIn();
+        $("#player").fadeIn();
     }
 
     function setupDraggable(setPosition) {
@@ -36,7 +43,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         var maskHeight = playground.height();
         var imgWidth = draggable.width();
         var imgHeight = draggable.height();
-        var x1 = maskWidth - imgWidth - 150;
+        var x1 = maskWidth - imgWidth;
         var y1 = maskHeight - imgHeight;
 
         if (setPosition == 'leftBottom') {
@@ -47,7 +54,15 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         draggable.draggable({ containment: [x1,y1,0,0] });
     }
 
-    $(function() {
+    function initPage() {
+        var loaded = false;
+
+        setTimeout(function() {
+            if (!loaded) {
+                $("#loading").fadeIn();
+            }
+        }, 500);
+
         playground = $("#playground");
         draggable = $("#draggable");
         var image_url = $("#playground img").attr('src');
@@ -55,14 +70,14 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         var img = new Image();
         img.src = image_url;
         $(img).load(function() {
+            loaded = true;
             initPlayground();
         });
 
-        $("#controls a").click(function() {
-            alert("Esto es sólo una prueba...");
-            return false;
-        });
+    }
 
+    $(function() {
+        initPage();
     });
 
 })(jQuery);
