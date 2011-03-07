@@ -24,6 +24,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
                 });
                 playground.fadeIn();
                 $("#controls").fadeIn();
+                $("#player").fadeIn();
             });
 
         }
