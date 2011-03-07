@@ -67,8 +67,8 @@ body#disco-aventuras {
 }
 
 #disco-aventuras #controls {
-    box-shadow: 0 2px 5px #444;
-    background-color: rgba(0,0,0,0.7);
+    box-shadow: 2px 2px 5px #222;
+    background-color: rgba(0,0,0,0.8);
 }
 
 #player {

@@ -27,12 +27,14 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         $("#loading").remove();
         $("#container").fadeIn();
 
-        draggable.css({top: 0, left: 0});
-        draggable.css({cursor: 'move'});
-        setupDraggable(draggable.attr('data-position'));
-        $(window).resize(function() {
-            if (draggable != null) setupDraggable(null);
-        });
+        if (draggable.size() > 0) {
+            draggable.css({top: 0, left: 0});
+            draggable.css({cursor: 'move'});
+            setupDraggable(draggable.attr('data-position'));
+            $(window).resize(function() {
+                if (draggable != null) setupDraggable(null);
+            });
+        }
         playground.fadeIn();
         $("#controls").fadeIn();
         $("#player").fadeIn();
@@ -74,11 +76,31 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             loaded = true;
             initPlayground();
         });
-
     }
 
+    var ajax = false;
     $(function() {
         initPage();
+
+        $("a.cancion-pequena").click(function() {
+            ajax = true;
+            $.get($(this).attr('href') + "?ajax=true", function(data) {
+                $("#songs").fadeOut(function() {
+                    $("#content").hide().html(data).fadeIn();
+                });
+            });
+            return false;
+        });
+
+        $(".song-image a").live('click', function() {
+            console.log("AJAX", ajax);
+            if (ajax) {
+                $("#content").fadeOut(function() {
+                   $("#songs").fadeIn();
+                });
+                return false;
+            }
+        });
     });
 
 })(jQuery);

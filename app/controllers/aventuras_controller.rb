@@ -17,6 +17,11 @@ class AventurasController < ApplicationController
 
   def cancion
     @title = params[:title]
+    if params[:ajax].present?
+      render :partial => @title, :layout => false
+    else
+      render :action => 'cancion'
+    end
   end
 
 
