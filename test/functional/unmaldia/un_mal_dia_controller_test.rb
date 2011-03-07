@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Unmaldia::PagesControllerTest < ActionController::TestCase
+class Unmaldia::UnMalDiaControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true

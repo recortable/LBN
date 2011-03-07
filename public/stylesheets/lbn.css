@@ -1,9 +1,20 @@
 html {
-    background-color: #020b0a;
     font-family: Arial, Helvetica, Tahoma, sans-serif;
     font-size: 12px;
-    color: #f6cb9f;
 }
+
+body#disco-unmaldia {
+    color: #f6cb9f;
+    background-color: #020b0a;
+}
+
+body#disco-aventuras {
+    background-image: url(/images/aventuras/fondo.jpg);
+    background-repeat: repeat;
+    background-color: #151618;
+    color: gray;
+}
+
 
 #playground {
     position: fixed;
@@ -28,8 +39,8 @@ html {
 }
 
 #playground a.enlace:hover {
-    border: 5px solid rgba(0,0,0,0.2);
-    background-color: rgba(0,0,0,0.1);
+    border: 0px solid rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.15);
 }
 
 
@@ -52,6 +63,11 @@ html {
     border-radius: 0 10px 10px 0;
     -moz-border-radius: 0 10px 10px 0;
     box-shadow: 0 2px 5px black;
+}
+
+#disco-aventuras #controls {
+    box-shadow: 0 2px 5px #444;
+    background-color: rgba(0,0,0,0.7);
 }
 
 #player {

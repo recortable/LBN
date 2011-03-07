@@ -1,12 +1,11 @@
-<%= render :partial => 'controls' %>
 
 <%= content_for :head do %>
     <style type="text/css">
         #clismon {
             left: 3120px;
             width: 310px;
-            top: 840px;
-            height: 60px;
+            top: 845px;
+            height: 55px;
         }
     </style>
 <% end %>
@@ -18,7 +17,7 @@
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 3744px; height:1772px; margin: 0 150px 0 50px; background-color: #15100a;" data-position="leftTop">
-    <img src="/images/canciones.jpg" alt="Portada" width="3541" height="1772"/>
+    <img id="preload" src="/images/canciones.jpg" alt="Portada" width="3541" height="1772"/>
     <%= link_to 'Clismón', 'http://clismon.net', :id => 'clismon', :class => 'enlace' %>
 
   </div>

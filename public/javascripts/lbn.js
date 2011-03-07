@@ -41,10 +41,10 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         console.log("Position " + setPosition);
         var maskWidth = playground.width();
         var maskHeight = playground.height();
-        var imgWidth = draggable.width();
-        var imgHeight = draggable.height();
-        var x1 = maskWidth - imgWidth;
-        var y1 = maskHeight - imgHeight;
+        var draggableWidth = draggable.width();
+        var draggableHeight = draggable.height();
+        var x1 = maskWidth - draggableWidth;
+        var y1 = maskHeight - draggableHeight;
 
         if (setPosition == 'leftBottom') {
             draggable.css({left: 0, top: y1});
@@ -65,7 +65,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
         playground = $("#playground");
         draggable = $("#draggable");
-        var image_url = $("#playground img").attr('src');
+        var image_url = $("#preload").attr('src');
         console.log(image_url);
         var img = new Image();
         img.src = image_url;

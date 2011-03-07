@@ -1,4 +1,3 @@
-<%= render :partial => 'controls' %>
 
 <%= content_for :head do %>
     <style type="text/css">
@@ -21,7 +20,7 @@
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 2559px; height:1240px;" data-position="leftTop">
-    <img src="/images/interior.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2559" height="1240"/>
+    <img id="preload" src="/images/interior.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2559" height="1240"/>
     <%= link_to 'Canciones', canciones_path, :id => 'unmaldia-canciones', :class => 'enlace' %>
     <%= link_to 'Periódico diagonal', 'http://www.diagonalperiodico.net/', :id => 'periodico-diagonal', :class => 'enlace' %>
   </div>

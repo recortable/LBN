@@ -1,0 +1,16 @@
+<%= content_for :head do %>
+    <style type="text/css">
+        #aventuras-canciones {
+            left:730px;
+            top: 0;bottom:0;
+            width:600px;
+        }
+    </style>
+<% end %>
+
+<div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
+  <div id="draggable" style="width: 2067px; height:966px;" data-position="leftTop">
+    <img id="preload" src="/images/cortinas.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2067" height="966"/>
+    <%= link_to 'Canciones', canciones_aventuras_path, :id => 'aventuras-canciones', :class => 'enlace' %>
+  </div>
+</div>

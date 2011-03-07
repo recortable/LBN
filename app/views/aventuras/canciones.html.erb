@@ -1,0 +1,66 @@
+<%= content_for :head do %>
+    <style type="text/css">
+        #container a {
+            display: block;
+            margin: 0 auto 50px auto;
+            overflow: hidden;
+            background-image: url('/images/aventuras/canciones-pequenas.png');
+            text-indent: -10000px;
+            opacity: 0.7;
+        }
+        #container a:hover {opacity:0.9;}
+
+        #cancion-01-la-palma { background-position: 0 0; width: 176px; height: 189px; }
+        #cancion-02-manuela { background-position: 0 -239px; width: 173px; height: 180px; } 
+        #cancion-03-bingo { background-position: 0 -469px; width: 181px; height: 197px; } 
+        #cancion-04-todas-las-escopetas { background-position: 0 -716px; width: 161px; height: 197px; }
+        #cancion-05-cancion-truco { background-position: 0 -963px; width: 176px; height: 187px; }
+        #cancion-06-el-mal-camino { background-position: 0 -1200px; width: 167px; height: 202px; }
+        #cancion-07-aventuras-domesticas { background-position: 0 -1452px; width: 166px; height: 186px; }
+        #cancion-08-lomo { background-position: 0 -1688px; width: 183px; height: 177px; } 
+        #cancion-09-rendicion { background-position: 0 -1915px; width: 176px; height: 197px; } 
+        #cancion-10-el-dios-insecto { background-position: -233px 0; width: 179px; height: 204px; }
+        #cancion-11-el-sastre { background-position: -233px -254px; width: 165px; height: 195px; }
+        #cancion-12-la-vieja-guarderia { background-position: -233px -499px; width: 181px; height: 199px; }
+        
+        #container {width: 840px; margin: 0 auto; }
+        .row {width: 100%; overflow: hidden; margin: 20px 0;}
+        .song {width: 210px; float: left;}
+
+
+            #lbn {display: block; margin: 20px auto;}
+    </style>
+<% end %>
+
+<div id="player" style="display:none;">
+  <object data="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="150" height="450">
+    <param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//">
+    <param name="quality" value="high">
+    <param name="allowNetworking" value="always">
+    <param name="wmode" value="transparent">
+    <param name="bgcolor" value="#020b0a">
+    <param name="allowScriptAccess" value="never">
+    <object data="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//" type="text/html" width="150" height="450"></object>
+  </object>
+</div>
+
+
+<div id="container">
+  <div class="row">
+    <img id="lbn" src="/images/aventuras/lasbuenasnoches.png"/>
+  </div>
+
+  <% AventurasController::CANCIONES.each_with_index do |cancion, index| %>
+      <% if index % 4 == 0 %>
+          <div class="row">
+      <% end %>
+      <div class="song">
+        <%= link_to cancion, cancion, :id => "cancion-#{cancion}" %>
+      </div>
+      <% if (index + 1) % 4 == 0 %>
+          </div>
+      <% end %>
+  <% end %>
+</div>
+
+<img id="preload" src="/images/aventuras/canciones-pequenas.png" style="display:none; "/>
