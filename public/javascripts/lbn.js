@@ -95,6 +95,18 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     }
 
     var ajax = false;
+
+    function showSongs() {
+        console.log("AJAX", ajax);
+        if (ajax) {
+            $("#content").fadeOut(function() {
+                $("#songs").fadeIn();
+            });
+            return false;
+        }
+
+    }
+
     $(function() {
         initPage();
 
@@ -108,14 +120,12 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             return false;
         });
 
+        $("#canciones-aventuras").click(function() {
+            return showSongs();
+        });
+
         $(".song-image a").live('click', function() {
-            console.log("AJAX", ajax);
-            if (ajax) {
-                $("#content").fadeOut(function() {
-                   $("#songs").fadeIn();
-                });
-                return false;
-            }
+            return showSongs();
         });
     });
 

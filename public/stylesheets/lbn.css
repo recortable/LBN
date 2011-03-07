@@ -73,7 +73,7 @@ body#disco-aventuras {
 }
 
 #player {
-    position:fixed;right:0;bottom: 10px;
+    position:fixed;right:0;top: 10px;
     background-color: #020b0a;
     width:150px;height:450px;
     padding: 10px;
