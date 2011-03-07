@@ -13,4 +13,8 @@ class UnMalDiaController < ApplicationController
 
   def videos
   end
+
+  def reloj
+
+  end
 end

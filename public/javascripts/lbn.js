@@ -46,15 +46,31 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         var maskHeight = playground.height();
         var draggableWidth = draggable.width();
         var draggableHeight = draggable.height();
+
         var x1 = maskWidth - draggableWidth;
+        var x2 = 0;
         var y1 = maskHeight - draggableHeight;
+        var y2 = 0;
+
+        if (x1 > 0) {
+            x1 = x2 = parseInt(x1 / 2);
+            draggable.css('left', "" + x1 + "px");
+        }
+        if (y1 > 0) {
+            y1 = y2 = parseInt(y1 / 2);
+            draggable.css('top', "" + y1 + "px");
+        }
 
         if (setPosition == 'leftBottom') {
             draggable.css({left: 0, top: y1});
         } else if (setPosition == 'leftTop') {
             draggable.css({left: 0, top: 0});
         }
-        draggable.draggable({ containment: [x1,y1,0,0] });
+        if (x1 != x2 || y1 != y2) {
+            draggable.draggable({ containment: [x1,y1,x2,y2] });
+        } else {
+            draggable.css('cursor', 'default');
+        }
     }
 
     function initPage() {

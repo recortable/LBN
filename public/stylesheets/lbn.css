@@ -14,6 +14,7 @@ body#disco-aventuras {
     background-repeat: repeat;
     background-color: #151618;
     color: gray;
+    overflow: visible;
 }
 
 
