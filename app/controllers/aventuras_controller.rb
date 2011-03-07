@@ -16,6 +16,7 @@ class AventurasController < ApplicationController
   end
 
   def cancion
+    @title = params[:title]
   end
 
 

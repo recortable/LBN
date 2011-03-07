@@ -25,6 +25,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
     function showPlayground() {
         $("#loading").remove();
+        $("#container").fadeIn();
 
         draggable.css({top: 0, left: 0});
         draggable.css({cursor: 'move'});

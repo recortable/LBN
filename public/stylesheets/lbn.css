@@ -1,3 +1,4 @@
+
 html {
     font-family: Arial, Helvetica, Tahoma, sans-serif;
     font-size: 12px;
@@ -9,7 +10,7 @@ body#disco-unmaldia {
 }
 
 body#disco-aventuras {
-    background-image: url(/images/aventuras/fondo.jpg);
+    background-image: url(/images/aventuras/fondo-oscuro.jpg);
     background-repeat: repeat;
     background-color: #151618;
     color: gray;
