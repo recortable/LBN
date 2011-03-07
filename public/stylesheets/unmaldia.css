@@ -19,7 +19,7 @@ html {
     z-index: 500;
 }
 
-#playground a {
+#playground a.enlace {
     position:absolute;
     border-radius: 10px;
     display: block;
@@ -27,21 +27,11 @@ html {
     z-index:1000;
 }
 
-#playground a:hover {
-    border: 10px solid rgba(0,0,0,0.2);
+#playground a.enlace:hover {
+    border: 5px solid rgba(0,0,0,0.2);
     background-color: rgba(0,0,0,0.1);
 }
 
-
-#unmaldia-canciones {
-    left: 360px; width: 420px;
-    top: 580px; height: 600px;
-}
-
-#unmaldia-interior {
-    left: 1620px; top: 40px;
-    width: 520px; height: 280px;
-}
 
 #loading {
     position: fixed;
@@ -76,11 +66,6 @@ html {
 }
 
 #controls a {display:block; text-decoration:none; color: white; padding: 5px 0;}
-
-
-#center > img {
-
-}
 
 *.unselectable {
     -moz-user-select: -moz-none;

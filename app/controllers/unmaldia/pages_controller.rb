@@ -15,6 +15,10 @@ class Unmaldia::PagesController < ApplicationController
   def videos
   end
 
+  def aventuras
+
+  end
+
 
   private
   def cache_page

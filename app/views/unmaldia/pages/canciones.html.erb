@@ -1,5 +1,16 @@
 <%= render :partial => 'controls' %>
 
+<%= content_for :head do %>
+    <style type="text/css">
+        #clismon {
+            left: 3120px;
+            width: 310px;
+            top: 840px;
+            height: 60px;
+        }
+    </style>
+<% end %>
+
 <div id="player" style="display:none;">
   <object data="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//" type="text/html" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="150" height="450"><param name="movie" value="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//"><param name="quality" value="high"><param name="allowNetworking" value="always"><param name="wmode" value="transparent"><param name="bgcolor" value="#020b0a"><param name="allowScriptAccess" value="never"><object data="http://bandcamp.com/EmbeddedPlayer/album=1650859682/size=tall2/bgcol=020b0a/linkcol=f6cb9f//" type="text/html" width="150" height="450"></object></object>
 </div>
@@ -8,5 +19,7 @@
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 3744px; height:1772px; margin: 0 150px 0 50px; background-color: #15100a;" data-position="leftTop">
     <img src="/images/canciones.jpg" alt="Portada" width="3541" height="1772"/>
+    <%= link_to 'Clismón', 'http://clismon.net', :id => 'clismon', :class => 'enlace' %>
+
   </div>
 </div>

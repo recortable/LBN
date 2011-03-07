@@ -2,9 +2,9 @@
 <html>
 <head>
   <title><%= yield :title %></title>
-  <link rel="icon" href="/images/icon-cara.ico" type="image/x-icon" >
+  <link rel="icon" href="/images/icon-cara.ico" type="image/x-icon">
   <%= csrf_meta_tag %>
-  <link href="/stylesheets/unmaldia.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/stylesheets/unmaldia.css" rel="stylesheet" type="text/css" media="screen"/>
   <%= yield :head %>
 </head>
 <body>
@@ -12,10 +12,18 @@
 <%= yield %>
 <div id="loading" style="display:none;">
   <img src="/images/reloj.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="423" height="386"
-       style="margin: -212px 0 0 -193px;" />
+       style="margin: -212px 0 0 -193px;"/>
 </div>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/javascripts/unmaldia.js"></script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3241357-6");
+    pageTracker._trackPageview();
+</script>
 </body>
 </html>
