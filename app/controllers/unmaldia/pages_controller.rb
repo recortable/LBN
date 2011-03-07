@@ -1,5 +1,5 @@
 class Unmaldia::PagesController < ApplicationController
-  layout 'unmaldia'
+  layout 'pages'
 
   before_filter :cache_page
 
