@@ -18,9 +18,9 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
                 draggable.css({top: 0, left: 0});
                 draggable.css({cursor: 'move'});
-                setupDraggable(true);
+                setupDraggable(draggable.attr('data-position'));
                 $(window).resize(function() {
-                    if (draggable != null) setupDraggable(false);
+                    if (draggable != null) setupDraggable(null);
                 });
                 playground.fadeIn();
                 $("#controls").fadeIn();
@@ -30,15 +30,18 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     }
 
     function setupDraggable(setPosition) {
+        console.log("Position " + setPosition);
         var maskWidth = playground.width();
         var maskHeight = playground.height();
         var imgWidth = draggable.width();
         var imgHeight = draggable.height();
-        var x1 = maskWidth - imgWidth;
+        var x1 = maskWidth - imgWidth - 150;
         var y1 = maskHeight - imgHeight;
 
-        if (setPosition) {
+        if (setPosition == 'leftBottom') {
             draggable.css({left: 0, top: y1});
+        } else if (setPosition == 'leftTop') {
+            draggable.css({left: 0, top: 0});
         }
         draggable.draggable({ containment: [x1,y1,0,0] });
     }

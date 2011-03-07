@@ -34,6 +34,17 @@ html {
     box-shadow: 0 2px 5px black;
 }
 
+#player {
+    position:fixed;right:0;bottom: 10px;
+    background-color: #020b0a;
+    width:150px;height:450px;
+    padding: 10px;
+    z-index:51000;
+    border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    box-shadow: 0 2px 5px black;
+}
+
 #controls a {display:block; text-decoration:none; color: white; padding: 5px 0;}
 
 

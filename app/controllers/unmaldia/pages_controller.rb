@@ -4,4 +4,8 @@ class Unmaldia::PagesController < ApplicationController
   def index
      response.headers['Cache-Control'] = 'public, max-age=300000'
   end
+
+  def unmaldia
+    response.headers['Cache-Control'] = 'public, max-age=300000'
+  end
 end
