@@ -159,16 +159,18 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     });
 
     function initComments() {
+        $("#comments .list").draggable({axis: "y"});
+        //$("#comments .list").draggable({ containment: [0,0,0,-300] });
         var comments = $('#comments');
         var width = comments.width();
         comments.css('width', '0').show();
-        $("a#comment").click(function() {
+        $("a.toggleComment").click(function() {
            if (comments.width() == 0) {
                comments.animate({'width': width});
-               playground.animate({right : width}, updateDraggable);
+               //playground.animate({right : width}, updateDraggable);
            } else {
                comments.animate({'width': 0});
-               playground.animate({right: 0}, updateDraggable);
+               //playground.animate({right: 0}, updateDraggable);
            }
             return false;
         });

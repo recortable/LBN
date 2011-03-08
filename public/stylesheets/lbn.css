@@ -105,9 +105,11 @@ body#disco-aventuras {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 150px;
+    width: 200px;
     background-color: #dfdfdf;
     box-shadow: -2px -2px 5px #dfdfdf;
+    -webkit-box-shadow: -2px -2px 5px #dfdfdf;
+    -moz-box-shadow: -2px -2px 5px #dfdfdf;
     z-index: 3000;
     font-family: 'Goudy Bookletter 1911', arial, serif;
     font-size: 14px;
@@ -117,9 +119,10 @@ body#disco-aventuras {
 }
 #comments a {text-decoration:none;color: #222;}
 #comments .list {width:100%; overflow: hidden; }
-#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 120px;}
+#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px;}
 #comments p .time {font-weight:800;}
 #comments .close {float: right;font-family:arial; font-size:10px;}
+#comments form {padding: 1em; width: 100%;}
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
@@ -146,4 +149,28 @@ body#disco-aventuras {
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+form textarea {margin: 10px 0; border: 1px solid gray; padding:2px;background-color:#eaeaea;}
+form a {  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 11px;
+}
+.button-clean-gray, form input[type=submit] {
+  background: #eee;
+  background: -moz-linear-gradient(top, #eee 0%, #ccc 100%);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ccc));
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #555;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 3px 1em;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  margin-right: 0.5em;
 }
