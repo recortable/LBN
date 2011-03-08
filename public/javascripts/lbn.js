@@ -70,7 +70,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         if (x1 != x2 || y1 != y2) {
             draggable.draggable({ containment: [x1,y1,x2,y2] });
         } else {
-            draggable.css({cursor:'default', position:'relative');
+            draggable.css({cursor:'default', position:'relative'});
         }
     }
 
