@@ -17,4 +17,8 @@ class UnMalDiaController < ApplicationController
   def reloj
 
   end
+
+  def lanada
+
+  end
 end

@@ -1,6 +1,80 @@
+<%= content_for :head do %>
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        .insider {
+            padding: 50px 0 0 10px;
+        }
 
-<div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
-  <div id="draggable" style="width: 2564px; height:1764px;" data-position="leftTop">
-    <img id="preload" src="/images/videos.jpg" alt="Portada" width="2564" height="1764"/>
+        #videos {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .video {
+            width: 400px;
+            float: left;
+            background-color: black; /*rgba(255, 255, 255, 0.01);*/
+            border-radius: 5px;
+            padding: 10px 10px 10px 10px;
+            margin: 20px;
+            box-shadow: 1px 1px 2px black;
+            opacity: 0.9;
+        }
+
+        div.video:hover {opacity:1;}
+
+        .video h3 {
+            font-family: 'Molengo', arial, serif;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+            #draggable {
+                box-shadow: 1px 0 3px gray;
+            }
+
+    </style>
+<% end %>
+
+<div id="playground" unselectable="on" class="unselectable" style="display:none;">
+  <div id="draggable" style="width: 1420px; height:1300px; padding-bottom:50px; background-color: rgba(255,255,255,0.8);" data-position="leftTop">
+    <div class="insider">
+      <div id="videos">
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8818892" width="400" height="300" frameborder="0"></iframe>
+          <h3>El Fin Del Mundo</h3>
+        </div>
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8739036" width="400" height="300" frameborder="0"></iframe>
+          <h3>La Plaga</h3>
+        </div>
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8735710" width="400" height="300" frameborder="0"></iframe>
+          <h3>La Jungla</h3>
+        </div>
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8742708" width="400" height="300" frameborder="0"></iframe>
+          <h3>Tucumán</h3>
+        </div>
+
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8816708" width="400" height="300" frameborder="0"></iframe>
+          <h3>Tucumán</h3>
+        </div>
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8820090" width="400" height="300" frameborder="0"></iframe>
+          <h3>De Muerte</h3>
+        </div>
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8738142" width="400" height="300" frameborder="0"></iframe>
+          <h3>Media Vida</h3>
+        </div>
+        <div class="video">
+          <iframe src="http://player.vimeo.com/video/8736603" width="400" height="300" frameborder="0"></iframe>
+          <h3>El Día de tu Boda</h3>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

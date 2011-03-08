@@ -1,4 +1,5 @@
-
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+li{list-style:none;}fieldset,img{border:0;}
 html {
     font-family: Arial, Helvetica, Tahoma, sans-serif;
     font-size: 12px;
@@ -55,17 +56,34 @@ body#disco-aventuras {
 }
 
 
+/*** CONTROLS ***/
 #controls {
     position: fixed;
-    left: 0;
-    top: 10px;
+    left: 10px;
+    top: 0px;
     background-color: #020b0a;
-    padding: 1em;
+    padding: 0.5em 1em;
     z-index: 50000;
-    border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
     box-shadow: 0 2px 5px black;
 }
+
+#controls ul {width:100%;overflow:hidden;}
+#controls li {float: left;margin: 0 0.5em;}
+#controls a {display:block; text-decoration:none; color: white; padding: 5px 0;}
+#controls li a:hover span {display: inherit;}
+
+/*** COMMENTS ***/
+#comments {
+    position:fixed;right:0;top:0;bottom:0;
+    background-color: rgba(0,0,0,0.5);
+    width: 00px;
+    box-shadow: -2px -2px -5px black;
+    z-index:3000;
+
+}
+
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
@@ -73,17 +91,16 @@ body#disco-aventuras {
 }
 
 #player {
-    position:fixed;right:0;top: 10px;
+    position:fixed;left:0;top: 0;
     background-color: #020b0a;
     width:150px;height:450px;
     padding: 10px;
     z-index:51000;
-    border-radius: 10px 0 0 10px;
+    border-radius: 0 0 10px 0;
     -moz-border-radius: 10px 0 0 10px;
     box-shadow: 0 2px 5px black;
 }
 
-#controls a {display:block; text-decoration:none; color: white; padding: 5px 0;}
 
 *.unselectable {
     -moz-user-select: -moz-none;

@@ -66,10 +66,11 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         } else if (setPosition == 'leftTop') {
             draggable.css({left: 0, top: 0});
         }
+        console.log("restr", { containment: [x1,y1,x2,y2] })
         if (x1 != x2 || y1 != y2) {
             draggable.draggable({ containment: [x1,y1,x2,y2] });
         } else {
-            draggable.css('cursor', 'default');
+            draggable.css({cursor:'default', position:'relative');
         }
     }
 
@@ -84,14 +85,19 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
         playground = $("#playground");
         draggable = $("#draggable");
-        var image_url = $("#preload").attr('src');
-        console.log(image_url);
-        var img = new Image();
-        img.src = image_url;
-        $(img).load(function() {
+        if ($("#preload").length) {
+            var image_url = $("#preload").attr('src');
+            console.log(image_url);
+            var img = new Image();
+            img.src = image_url;
+            $(img).load(function() {
+                loaded = true;
+                initPlayground();
+            });
+        } else {
             loaded = true;
             initPlayground();
-        });
+        }
     }
 
     var ajax = false;
@@ -109,6 +115,9 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
     $(function() {
         initPage();
+        if ($("#player").length) {
+            $("#controls").css('left', '180px');
+        }
 
         $("a.cancion-pequena").click(function() {
             ajax = true;

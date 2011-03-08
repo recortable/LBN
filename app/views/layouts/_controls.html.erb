@@ -1,8 +1,20 @@
 <div id="controls" style="display:none;">
-  <%= link_to 'Las Buenas Noches', root_path %>
-  <%= link_to 'Aventuras Domésticas', aventuras_path %>
-  <%= link_to 'Un Mal Día', unmaldia_path %>
-  <%= link_to 'Vídeos', videos_path %>
-  <%= link_to 'Comentar', '#' %>
-  <div><br/>Próximos conciertos: .....</div>
+  <ul>
+    <li><a href="<%=  root_path %>"><span >Las&nbsp;Buenas&nbsp;Noches</span></a></li>
+    <li><a href="<%= unmaldia_path %>"><span >Un&nbsp;Mal&nbsp;Día</span></a></li>
+    <li><a href="<%= aventuras_path %>"><span >Aventuras&nbsp;Domésticas</span></a></li>
+    <li><a href="<%= videos_path %>"><span >Vídeos</span></a></li>
+    <li><a href="#"><span >Comentar</span></a></li>
+  </ul>
+</div>
+
+<div id="comments">
+  <a class="close" href="#">Cerrar</a>
+  <h1>Comentarios</h1>
+  <%= form_for Comment.new do |form| %>
+
+  <% end %>
+  <div class="list">
+
+  </div>
 </div>

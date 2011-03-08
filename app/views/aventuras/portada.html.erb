@@ -1,0 +1,40 @@
+<%= content_for :head do %>
+    <style type="text/css">
+        #reloj {
+            left: 866px;
+            top: 70px;
+            width: 90px;
+            height:60px;
+        }
+
+        #unmaldia {
+            left: 55px;
+            top: 280px;
+            width: 420px;
+            height: 560px;
+        }
+
+        #lanada {
+            left: 200px;
+            top: 100px;
+            width: 70px;
+            height: 40px;
+        }
+        #aventuras-canciones {
+            left: 1670px;
+            top: 560px;
+            width: 470px;
+            height: 464px;
+        }
+    </style>
+<% end %>
+
+<div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
+  <div id="draggable" style="width: 2356px; height:1082px;" data-position="leftTop">
+    <img id="preload" src="/images/aventuras/portada.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2356" height="1082"/>
+    <%= link_to 'Un Mal Día (lo tiene cualquiera)', unmaldia_path, :id => 'unmaldia', :class => 'enlace' %>
+    <%= link_to 'La nada', lanada_path, :id => 'lanada', :class => 'enlace' %>
+    <%= link_to 'Aventuras Domésticas: Canciones', canciones_aventuras_path, :id => 'aventuras-canciones', :class => 'enlace' %>
+    <%= link_to 'El Reloj', reloj_path, :id => 'reloj', :class => 'enlace' %>
+  </div>
+</div>
