@@ -1,5 +1,16 @@
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
-li{list-style:none;}fieldset,img{border:0;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+fieldset, img {
+    border: 0;
+}
+
 html {
     font-family: Arial, Helvetica, Tahoma, sans-serif;
     font-size: 12px;
@@ -18,7 +29,6 @@ body#disco-aventuras {
     overflow: visible;
 }
 
-
 #playground {
     position: fixed;
     left: 0;
@@ -29,23 +39,23 @@ body#disco-aventuras {
 }
 
 #draggable {
-    position:relative;
+    position: relative;
     z-index: 500;
 }
 
 #playground a.enlace {
-    position:absolute;
+    position: absolute;
     border-radius: 10px;
     display: block;
-    overflow: hidden; text-indent:-1000px;
-    z-index:1000;
+    overflow: hidden;
+    text-indent: -1000px;
+    z-index: 1000;
 }
 
 #playground a.enlace:hover {
-    border: 0px solid rgba(0,0,0,0.2);
-    background-color: rgba(0,0,0,0.15);
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.15);
 }
-
 
 #loading {
     position: fixed;
@@ -54,7 +64,6 @@ body#disco-aventuras {
     width: 50%;
     height: 50%;
 }
-
 
 /*** CONTROLS ***/
 #controls {
@@ -69,38 +78,67 @@ body#disco-aventuras {
     box-shadow: 0 2px 5px black;
 }
 
-#controls ul {width:100%;overflow:hidden;}
-#controls li {float: left;margin: 0 0.5em;}
-#controls a {display:block; text-decoration:none; color: white; padding: 5px 0;}
-#controls li a:hover span {display: inherit;}
+#controls ul {
+    width: 100%;
+    overflow: hidden;
+}
+
+#controls li {
+    float: left;
+    margin: 0 0.5em;
+}
+
+#controls a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+}
+
+#controls li a:hover span {
+    display: inherit;
+}
 
 /*** COMMENTS ***/
 #comments {
-    position:fixed;right:0;top:0;bottom:0;
-    background-color: rgba(0,0,0,0.5);
-    width: 00px;
-    box-shadow: -2px -2px -5px black;
-    z-index:3000;
-
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    background-color: #dfdfdf;
+    box-shadow: -2px -2px 5px #dfdfdf;
+    z-index: 3000;
+    font-family: 'Goudy Bookletter 1911', arial, serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    color: #222;
+    font-weight: 500;
 }
-
+#comments a {text-decoration:none;color: #222;}
+#comments .list {width:100%; overflow: hidden; }
+#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 120px;}
+#comments p .time {font-weight:800;}
+#comments .close {float: right;font-family:arial; font-size:10px;}
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #player {
-    position:fixed;left:0;top: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
     background-color: #020b0a;
-    width:150px;height:450px;
+    width: 150px;
+    height: 450px;
     padding: 10px;
-    z-index:51000;
+    z-index: 51000;
     border-radius: 0 0 10px 0;
     -moz-border-radius: 10px 0 0 10px;
     box-shadow: 0 2px 5px black;
 }
-
 
 *.unselectable {
     -moz-user-select: -moz-none;

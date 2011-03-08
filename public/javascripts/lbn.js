@@ -155,6 +155,23 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         });
 
         initVideos();
+        initComments();
     });
+
+    function initComments() {
+        var comments = $('#comments');
+        var width = comments.width();
+        comments.css('width', '0').show();
+        $("a#comment").click(function() {
+           if (comments.width() == 0) {
+               comments.animate({'width': width});
+               playground.animate({right : width}, updateDraggable);
+           } else {
+               comments.animate({'width': 0});
+               playground.animate({right: 0}, updateDraggable);
+           }
+            return false;
+        });
+    }
 
 })(jQuery);
