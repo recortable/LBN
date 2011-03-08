@@ -19,9 +19,31 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
                 });
             else
                 showPlayground();
-
+            loadSubstitutes();
         }
     }
+
+    /** LOAD SUBSTITUTE IMAGES **/
+    function loadSubstitutes() {
+        preloadImage("#substitute", function(image_url) {
+            console.log("Getting bigger image");
+            $("#preload").attr('src', image_url);
+        });
+    }
+
+    function preloadImage(source, callback) {
+        if ($(source).length) {
+            var image_url = $(source).attr('src');
+            console.log("Waiting for " + image_url);
+            var img = new Image();
+            img.src = image_url;
+            $(img).load(function() {
+                callback(image_url);
+            });
+        }
+    }
+
+
 
     function showPlayground() {
         $("#loading").remove();
@@ -88,7 +110,6 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         draggable = $("#draggable");
         if ($("#preload").length) {
             var image_url = $("#preload").attr('src');
-            console.log(image_url);
             var img = new Image();
             img.src = image_url;
             $(img).load(function() {
@@ -100,6 +121,8 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             initPlayground();
         }
     }
+
+
 
     var ajax = false;
 
