@@ -18,8 +18,13 @@
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 3744px; height:1772px; margin: 0 0px 0 150px; background-color: #15100a;" data-position="leftTop">
-    <img id="preload" src="/images/canciones.jpg" alt="Portada" width="3541" height="1772"/>
+    <img id="img_canciones" src="/images/canciones-peq.jpg" alt="Portada" width="3541" height="1772"/>
     <%= link_to 'Clismón', 'http://clismon.net', :id => 'clismon', :class => 'enlace' %>
 
   </div>
+</div>
+
+<div class="image-cache" style="display:none">
+  <img class="replacement" data-original="#img_canciones" src="/images/canciones.jpg" />
+  <img class="cache" src="/images/interior.jpg" />
 </div>

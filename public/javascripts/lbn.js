@@ -14,26 +14,30 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         if (!initialized) {
             initialized = true;
             if ($("#loading").is(":visible"))
-                $("#loading").fadeOut(2000, function() {
+                $("#loading").fadeOut(function() {
                     showPlayground();
                 });
             else
                 showPlayground();
-            loadSubstitutes();
+            loadReplacements();
         }
     }
 
     /** LOAD SUBSTITUTE IMAGES **/
-    function loadSubstitutes() {
-        preloadImage("#substitute", function(image_url) {
-            console.log("Getting bigger image");
-            $("#preload").attr('src', image_url);
+    function loadReplacements() {
+        $(".replacement").each(function() {
+            var source = $(this);
+            preloadImage(source, function(image_url) {
+                var original_selector = source.attr('data-original');
+                console.log("Replacing " + original_selector + " with " + image_url);
+                $(original_selector).attr('src', image_url);
+            });
         });
     }
 
     function preloadImage(source, callback) {
-        if ($(source).length) {
-            var image_url = $(source).attr('src');
+        if (source.length) {
+            var image_url = source.attr('src');
             console.log("Waiting for " + image_url);
             var img = new Image();
             img.src = image_url;
@@ -42,7 +46,6 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             });
         }
     }
-
 
 
     function showPlayground() {
@@ -123,7 +126,6 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     }
 
 
-
     var ajax = false;
 
     function showSongs() {
@@ -188,13 +190,13 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         var width = comments.width();
         comments.css('width', '0').show();
         $("a.toggleComment").click(function() {
-           if (comments.width() == 0) {
-               comments.animate({'width': width});
-               //playground.animate({right : width}, updateDraggable);
-           } else {
-               comments.animate({'width': 0});
-               //playground.animate({right: 0}, updateDraggable);
-           }
+            if (comments.width() == 0) {
+                comments.animate({'width': width});
+                //playground.animate({right : width}, updateDraggable);
+            } else {
+                comments.animate({'width': 0});
+                //playground.animate({right: 0}, updateDraggable);
+            }
             return false;
         });
     }
