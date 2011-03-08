@@ -32,14 +32,13 @@
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 2356px; height:1082px;" data-position="leftTop">
-    <img id="preload" src="/images/aventuras/portada.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2356" height="1082"/>
+    <img id="img_portada" src="/images/aventuras/portada-low.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2356" height="1082"/>
     <%= link_to 'Un Mal Día (lo tiene cualquiera)', unmaldia_path, :id => 'unmaldia', :class => 'enlace' %>
     <%= link_to 'La nada', lanada_path, :id => 'lanada', :class => 'enlace' %>
     <%= link_to 'Aventuras Domésticas: Canciones', canciones_aventuras_path, :id => 'aventuras-canciones', :class => 'enlace' %>
     <%= link_to 'El Reloj', reloj_path, :id => 'reloj', :class => 'enlace' %>
   </div>
 </div>
-<div id="loading" style="display:none;">
-  <img src="/images/aventuras/lasbuenasnoches.png" alt="Un Mal Día (Lo tiene cualquiera)" width="428" height="235"
-       style="margin: -115px 0 0 -224px;"/>
+<div class="image-cache" style="display:none">
+  <img class="replacement" data-original="#img_portada" src="/images/aventuras/portada.jpg" />
 </div>

@@ -15,8 +15,17 @@
         }
 
         #aventuras-portada {
-            left:2210px;top:530px;
-            width:88px;height:210px;
+            left: 2210px;
+            top: 530px;
+            width: 88px;
+            height: 210px;
+        }
+
+        #lovelace {
+            left: 1367px;
+            top: 710px;
+            width: 15px;
+            height: 20px;
         }
     </style>
 <% end %>
@@ -25,9 +34,15 @@
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 2559px; height:1240px;" data-position="leftBottom">
-    <img id="preload" src="/images/interior.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2559" height="1240"/>
+    <img id="img_interior" src="/images/interior-low.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2559" height="1240"/>
     <%= link_to 'Canciones', canciones_path, :id => 'unmaldia-canciones', :class => 'enlace' %>
     <%= link_to 'Periódico diagonal', 'http://www.diagonalperiodico.net/', :id => 'periodico-diagonal', :class => 'enlace' %>
     <%= link_to 'Aventuras Domésticas', aventuras_portada_path, :id => 'aventuras-portada', :class => 'enlace' %>
+    <%= link_to 'La primera persona programadora', 'http://es.wikipedia.org/wiki/Ada_Lovelace', :id => 'lovelace', :class => 'enlace' %>
   </div>
+</div>
+
+<div class="image-cache" style="display:none">
+  <img class="replacement" data-original="#img_interior" src="https://s3-eu-west-1.amazonaws.com/lbn/interior.jpg"/>
+  <img class="cache" src="/images/interior.jpg"/>
 </div>

@@ -174,3 +174,18 @@ form a {  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ge
   text-shadow: 0 1px 0 #eee;
   margin-right: 0.5em;
 }
+
+#working {
+    position: fixed;
+    right: 10px;
+    top: 0px;
+    background-color: #020b0a;
+    padding: 0.5em 1em;
+    z-index: 50000;
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px black;
+    color: yellow;
+}
+
+#working span {display: block; float: right; margin: 3px 1em 0 1em;}

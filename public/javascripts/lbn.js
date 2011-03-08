@@ -25,14 +25,23 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
     /** LOAD SUBSTITUTE IMAGES **/
     function loadReplacements() {
-        $(".replacement").each(function() {
+        var replacements = $(".replacement");
+        var total = replacements.length;
+        replacements.each(function() {
             var source = $(this);
             preloadImage(source, function(image_url) {
                 var original_selector = source.attr('data-original');
                 console.log("Replacing " + original_selector + " with " + image_url);
                 $(original_selector).attr('src', image_url);
+                total--;
+                if (total == 0) {
+                    $("#working").slideUp(500);
+                }
             });
         });
+        if (total == 0) {
+            $("#working").slideUp(500);
+        }
     }
 
     function preloadImage(source, callback) {
