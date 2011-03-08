@@ -18,21 +18,26 @@
             padding: 10px 10px 10px 10px;
             margin: 20px;
             box-shadow: 1px 1px 2px black;
-            opacity: 0.9;
+            opacity: 1;
         }
 
-        div.video:hover {opacity:1;}
+        .video .view {height:300px; overflow:hidden;}
 
-        .video h3 {
+        div.video:hover {
+            opacity: 1;
+        }
+
+        .video h3 a {
             font-family: 'Molengo', arial, serif;
             color: rgba(255, 255, 255, 0.6);
             font-size: 16px;
             font-weight: 700;
+            text-decoration:none;
         }
 
-            #draggable {
-                box-shadow: 1px 0 3px gray;
-            }
+        #draggable {
+            box-shadow: 1px 0 3px gray;
+        }
 
     </style>
 <% end %>
@@ -42,37 +47,60 @@
     <div class="insider">
       <div id="videos">
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8818892" width="400" height="300" frameborder="0"></iframe>
-          <h3>El Fin Del Mundo</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/elfindelmundo.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8818892" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">El Fin Del Mundo</a></h3>
         </div>
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8739036" width="400" height="300" frameborder="0"></iframe>
-          <h3>La Plaga</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/laplaga.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8739036" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">La Plaga</a></h3>
         </div>
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8735710" width="400" height="300" frameborder="0"></iframe>
-          <h3>La Jungla</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/lajungla.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8735710" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">La Jungla</a></h3>
         </div>
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8742708" width="400" height="300" frameborder="0"></iframe>
-          <h3>Tucumán</h3>
-        </div>
-
-        <div class="video">
-          <iframe src="http://player.vimeo.com/video/8816708" width="400" height="300" frameborder="0"></iframe>
-          <h3>Tucumán</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/tucuman.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8742708" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">Tucumán</a></h3>
         </div>
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8820090" width="400" height="300" frameborder="0"></iframe>
-          <h3>De Muerte</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/tucumanexterior.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8816708" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">Tucumán</a></h3>
         </div>
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8738142" width="400" height="300" frameborder="0"></iframe>
-          <h3>Media Vida</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/demuerte.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8820090" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">De Muerte</a></h3>
         </div>
         <div class="video">
-          <iframe src="http://player.vimeo.com/video/8736603" width="400" height="300" frameborder="0"></iframe>
-          <h3>El Día de tu Boda</h3>
+          <div class="view">
+            <a href="#"><img src="/images/videos/mediavida.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8738142" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">Media Vida</a></h3>
+        </div>
+        <div class="video">
+          <div class="view">
+            <a href="#"><img src="/images/videos/eldiadetuboda.jpg" width="400" height="297"/></a>
+            <iframe src="http://player.vimeo.com/video/8736603" width="400" height="300" frameborder="0" style="display:none;"></iframe>
+          </div>
+          <h3><a href="#" class="preview">El Día de tu Boda</a></h3>
         </div>
       </div>
     </div>

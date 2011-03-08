@@ -30,9 +30,9 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         if (draggable.size() > 0) {
             draggable.css({top: 0, left: 0});
             draggable.css({cursor: 'move'});
-            setupDraggable(draggable.attr('data-position'));
+            updateDraggable(draggable.attr('data-position'));
             $(window).resize(function() {
-                if (draggable != null) setupDraggable(null);
+                if (draggable != null) updateDraggable(null);
             });
         }
         playground.fadeIn();
@@ -40,7 +40,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         $("#player").fadeIn();
     }
 
-    function setupDraggable(setPosition) {
+    function updateDraggable(setPosition) {
         console.log("Position " + setPosition);
         var maskWidth = playground.width();
         var maskHeight = playground.height();
@@ -114,6 +114,22 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
     }
 
+    function initVideos() {
+        $(".video .view a").click(function() {
+            $(this).fadeOut();
+            $(this).siblings('iframe').fadeIn();
+            return false;
+        });
+
+
+        $(".video h3 a").click(function() {
+            var parent = $(this).parents('.video');
+            parent.find('iframe').fadeToggle();
+            parent.find('.view a').fadeToggle();
+            return false;
+        });
+    }
+
     $(function() {
         initPage();
         if ($("#player").length) {
@@ -137,6 +153,8 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         $(".song-image a").live('click', function() {
             return showSongs();
         });
+
+        initVideos();
     });
 
 })(jQuery);
