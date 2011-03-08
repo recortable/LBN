@@ -5,12 +5,20 @@
             top: 0;bottom:0;
             width:600px;
         }
+
+        #aventuras-portada {
+            left:10px;
+            top: 320px;
+            width:150px;
+            height:150px;
+        }
     </style>
 <% end %>
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
   <div id="draggable" style="width: 2067px; height:966px;" data-position="leftTop">
-    <img id="preload" src="/images/cortinas.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2067" height="966"/>
+    <img id="preload" src="/images/aventuras/cortinas.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2067" height="966"/>
     <%= link_to 'Canciones', canciones_aventuras_path, :id => 'aventuras-canciones', :class => 'enlace' %>
+    <%= link_to 'Portada', aventuras_portada_path, :id => 'aventuras-portada', :class => 'enlace' %>
   </div>
 </div>
