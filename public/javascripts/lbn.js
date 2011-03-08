@@ -66,7 +66,8 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         } else if (setPosition == 'leftTop') {
             draggable.css({left: 0, top: 0});
         }
-        console.log("restr", { containment: [x1,y1,x2,y2] })
+
+        // mirar a ver si está el data antes de arreglar nada aquí!!!
         if (x1 != x2 || y1 != y2) {
             draggable.draggable({ containment: [x1,y1,x2,y2] });
         } else {
