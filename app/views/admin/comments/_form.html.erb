@@ -1,17 +1,26 @@
-<%= form_for(@admin_comment) do |f| %>
-  <% if @admin_comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin_comment.errors.count, "error") %> prohibited this admin_comment from being saved:</h2>
+<%= form_for([:admin, @comment]) do |f| %>
+    <% if @comment.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@comment.errors.count, "error") %> lo que está mal:</h2>
 
-      <ul>
-      <% @admin_comment.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @comment.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="fields">
+      <p>
+        <label>Email</label>
+        <%= f.text_field :author %>
+      </p>
+      <p>
+        <label>Lo que han dicho:</label>
+        <%= f.text_area :content %>
+      </p>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit 'Guardar' %>
+    </div>
 <% end %>

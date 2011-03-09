@@ -1,4 +1,7 @@
-<h1>Listing admin_comments</h1>
+<h1>Comentarios</h1>
+
+<%= link_to 'Ver todos los emails', admin_emails_path %>
+<%= link_to 'Añadir comentario (un poco feo, que lo hagamos nosotros, ¿no?', new_admin_comment_path %>
 
 <table>
   <tr>
@@ -8,15 +11,13 @@
     <th></th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @comments.each do |comment| %>
   <tr>
-    <td><%= comment.content %></td>
+    <td><%= comment.content.present? ? comment.content : '<NADA>' %></td>
     <td><%= comment.author %></td>
     <td><%= comment.url %></td>
-    <td><%= link_to 'Show', [:admin, comment] %></td>
     <td><%= link_to 'Edit', edit_admin_comment_path(comment) %></td>
     <td><%= link_to 'Destroy', [:admin, comment], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -25,4 +26,3 @@
 
 <br />
 
-<%= link_to 'New Comment', new_admin_comment_path %>

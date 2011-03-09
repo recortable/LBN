@@ -17,8 +17,10 @@ LBN::Application.routes.draw do
   end
 
 
-  match 'admin' => 'admin/comments#index', :as => 'admin'
   resources :comments
+
+  match 'admin' => 'admin/comments#index', :as => 'admin'
+  match 'emails' => 'admin/comments#emails', :as => 'admin_emails'
   namespace :admin do
     resources :comments
   end
