@@ -70,6 +70,53 @@
             height: 45px;
         }
 
+        #pan {
+            left: 1410px;
+            top: 740px;
+            width: 32px;
+            height: 40px;
+        }
+
+        #guitarra {
+            left: 2377px;
+            top: 928px;
+            width: 90px;
+            height: 110px;
+        }
+        #incendio {
+            left: 1995px;
+            top: 1070px;
+            width: 135px;
+            height: 65px;
+        }
+        #nina {
+            left: 345px;
+            top: 24px;
+            width: 135px;
+            height: 50px;
+        }
+
+        #krupa {
+            left: 435px;
+            top: 1010px;
+            width: 75px;
+            height: 55px;
+        }
+
+        #vinyl {
+            left: 555px;
+            top: 1157px;
+            width: 48px;
+            height: 34px;
+        }
+
+        #ready {
+            left: 1348px;
+            top: 990px;
+            width: 25px;
+            height: 45px;
+        }
+
     </style>
 <% end %>
 <%= title 'Un Mal Día (lo tiene cualquiera)' %>
@@ -81,6 +128,7 @@
     <%= link_to 'Canciones', canciones_path, :id => 'unmaldia-canciones', :class => 'enlace' %>
     <%= link_to 'Periódico diagonal', 'http://www.diagonalperiodico.net/', :id => 'periodico-diagonal', :class => 'enlace' %>
     <%= link_to 'Aventuras Domésticas', aventuras_portada_path, :id => 'aventuras-portada', :class => 'enlace' %>
+    <%= link_to 'Aventuras Domésticas', aventuras_portada_path, :id => 'incendio', :class => 'enlace' %>
     <%= link_to 'La primera persona programadora', 'http://es.wikipedia.org/wiki/Ada_Lovelace', :id => 'lovelace', :class => 'enlace' %>
     <%= link_to 'Tres amigos', 'http://www.youtube.com/watch?v=WohoxIhOpTk', :id => 'ferlosio', :class => 'enlace' %>
     <%= link_to 'Daniel Cuberta', 'http://www.danielcuberta.com/', :id => 'cuberta', :class => 'enlace' %>
@@ -88,10 +136,15 @@
     <%= link_to 'No estoy a la moda', 'http://www.youtube.com/watch?v=mNA-4tnM_xY', :id => 'lcd', :class => 'enlace' %>
     <%= link_to 'Todos los días', 'http://www.youtube.com/watch?v=GMezwtB1oCU', :id => 'everyday', :class => 'enlace' %>
     <%= link_to 'El Becerrito', 'http://www.youtube.com/watch?v=ujy0KSGWYkM', :id => 'simon', :class => 'enlace' %>
+    <%= link_to 'La Panaderia', 'http://despachodepan.com/', :id => 'pan', :class => 'enlace' %>
+    <%= link_to 'Guitarra', 'http://www.youtube.com/watch?v=H6BiwajDrYA', :id => 'guitarra', :class => 'enlace' %>
+    <%= link_to 'Nina', 'http://www.youtube.com/watch?v=65rz61qOwhc', :id => 'nina', :class => 'enlace' %>
+    <%= link_to 'Gene Krupa', 'http://www.youtube.com/watch?v=j9J5Zt2Obko', :id => 'krupa', :class => 'enlace' %>
+    <%= link_to 'How to make a vinyl', 'http://www.youtube.com/watch?v=Ln2E6Sc7YJE', :id => 'vinyl', :class => 'enlace' %>
+    <%= link_to 'Are you really ready?', 'http://www.youtube.com/watch?v=RHXtB9ssnhw', :id => 'ready', :class => 'enlace' %>
   </div>
 </div>
 
 <div class="image-cache" style="display:none">
   <img class="replacement" data-original="#img_interior" src="https://s3-eu-west-1.amazonaws.com/lbn/interior.jpg"/>
-  <img class="cache" src="/images/interior.jpg"/>
 </div>
