@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 
   def create
     comment = Comment.create(params[:comment]) if params[:lbn] == 'lbn'
+    LbnMailer.comment_email(comment).deliver
     render :text => 'Gracias!'
   end
 end
