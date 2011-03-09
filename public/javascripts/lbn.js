@@ -36,12 +36,22 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
                 total--;
                 if (total == 0) {
                     $("#working").slideUp(500);
+                    loadCached();
                 }
             });
         });
         if (total == 0) {
             $("#working").slideUp(500);
+            loadCached();
         }
+    }
+
+    function loadCached() {
+        setTimeout(function() {
+           $("div.cache").each(function() {
+               new Image().src = $(this).attr('data-src');
+           })
+        });
     }
 
     function preloadImage(source, callback) {
