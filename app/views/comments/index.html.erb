@@ -1,0 +1,15 @@
+<div class="list">
+  <%= form_for @comment do |form| %>
+      <div>Email: (no saldrá publicado)</div>
+      <%= form.text_field :author %>
+      <%= form.text_area :content %>
+      <%= form.submit 'Enviar' %><%= link_to 'Cerrar', '#', :class => 'toggleComment' %>
+  <% end %>
+  <div class="comments">
+    <% @comments.each do |comment| %>
+        <p class="unselectable">
+          <span class="time"><%= comment.created_at.strftime("%d/%m/%Y") %>&nbsp;-&nbsp;</span><%= comment.content %>
+        </p>
+    <% end %>
+  </div>
+</div>

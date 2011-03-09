@@ -135,17 +135,11 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     }
 
 
-    var ajax = false;
-
     function showSongs() {
-        console.log("AJAX", ajax);
-        if (ajax) {
-            $("#content").fadeOut(function() {
-                $("#songs").fadeIn();
-            });
-            return false;
-        }
-
+        $("#content").fadeOut(function() {
+            $("#songs").fadeIn();
+        });
+        return false;
     }
 
     function initVideos() {
@@ -193,20 +187,40 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     });
 
     function initComments() {
-        $("#comments .list").draggable({axis: "y"});
+        var loaded = false; // if comments are loaded
         //$("#comments .list").draggable({ containment: [0,0,0,-300] });
         var comments = $('#comments');
         var width = comments.width();
         comments.css('width', '0').show();
-        $("a.toggleComment").click(function() {
+        var offset = $("#comments").offset().left - width;
+
+        $("a.toggleComment").live('click', function() {
             if (comments.width() == 0) {
+                if (!loaded) {
+                    $("#comments").load('/comments', function() {
+                        loaded = true;
+                        var height = $("#comments .comments").height();
+                        $("#comments .list").draggable({ containment: [offset,-height,offset,0]}); //({axis: "y"});
+                    });
+                }
+                $("#comments .list").css('top', 0);
                 comments.animate({'width': width});
                 //playground.animate({right : width}, updateDraggable);
+
             } else {
                 comments.animate({'width': 0});
                 //playground.animate({right: 0}, updateDraggable);
             }
             return false;
+        });
+
+        $("#comments form").live('submit', function(e) {
+            var body = $("#comment_content").val();
+            var email =$("#comment_author").val();
+            console.log(body, email);
+            $("#comments .comments").prepend("<p><span>Tu - </span>"+ body + "</p>");
+            $.post("/comments", {'comment[content]':body, 'comment[author]':email, 'lbn': 'lbn'});
+            e.preventDefault();
         });
     }
 

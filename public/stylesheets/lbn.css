@@ -106,23 +106,29 @@ body#disco-aventuras {
     right: 0;
     bottom: 0;
     width: 200px;
-    background-color: #dfdfdf;
-    box-shadow: -2px -2px 5px #dfdfdf;
-    -webkit-box-shadow: -2px -2px 5px #dfdfdf;
-    -moz-box-shadow: -2px -2px 5px #dfdfdf;
+    /*background-color: #dfdfdf;*/
+    background-color: #020b0a;
+    box-shadow: -2px -2px 5px #020b0a;
+    /*box-shadow: -2px -2px 5px #dfdfdf;*/
+    -webkit-box-shadow: -2px -0px 5px #020b0a;
+    -moz-box-shadow: -2px -2px 5px #020b0a;
     z-index: 3000;
-    font-family: 'Goudy Bookletter 1911', arial, serif;
-    font-size: 14px;
+    /*font-family: 'Goudy Bookletter 1911', arial, serif;*/
+    /*font-size: 14px;*/
     line-height: 1.4em;
-    color: #222;
-    font-weight: 500;
+    /*color: #222;*/
+    /*font-weight: 500;*/
+    color: #EFEFEF;
 }
-#comments a {text-decoration:none;color: #222;}
-#comments .list {width:100%; overflow: hidden; }
-#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px;}
+/*color: #222; texto */
+#comments a {text-decoration:none;color: #AAA;}
+#comments .list {width:200px; overflow: hidden; }
+#comments .comments {cursor:move;}
+#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px; text-shadow:none; }
 #comments p .time {font-weight:800;}
 #comments .close {float: right;font-family:arial; font-size:10px;}
-#comments form {padding: 1em; width: 100%;}
+#comments form {padding: 10px; width: 100%;}
+#comments form textarea {width: 170px; background-color: white;}
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
