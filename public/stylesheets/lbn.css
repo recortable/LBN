@@ -141,13 +141,14 @@ body#disco-aventuras {
     top: 0;
     background-color: #020b0a;
     width: 150px;
-    height: 450px;
+    height: 550px;
     padding: 10px;
     z-index: 51000;
     border-radius: 0 0 10px 0;
     -moz-border-radius: 10px 0 0 10px;
     box-shadow: 0 2px 5px black;
 }
+#player.aventuras {height:570px;}
 
 *.unselectable {
     -moz-user-select: -moz-none;
