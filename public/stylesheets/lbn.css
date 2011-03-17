@@ -41,20 +41,24 @@ body#disco-aventuras {
 #draggable {
     position: relative;
     z-index: 500;
+
 }
+
+.ui-draggable {cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;}
+.ui-draggable-dragging {cursor: url(https://mail.google.com/mail/images/2/closedhand.cur), default !important;}
 
 #playground a.enlace {
     position: absolute;
-    border-radius: 10px;
     display: block;
     overflow: hidden;
     text-indent: -1000px;
     z-index: 1000;
+    border-radius: 3px;
 }
 
 #playground a.enlace:hover {
-    border: 0px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px black;
 }
 
 #loading {
@@ -124,7 +128,11 @@ body#disco-aventuras {
 #comments a {text-decoration:none;color: #AAA;}
 #comments .list {width:200px; overflow: hidden; }
 #comments .comments {cursor:move;}
-#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px; text-shadow:none; }
+#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px;
+font-family: 'Bentham', arial, serif;font-size:15px;
+        letter-spacing: 0.07em; line-height:1.3em; color: #EEE;
+        text-shadow: 2px 1px 3px #020202; font-weight: 500;
+}
 #comments p .time {font-weight:800;}
 #comments .close {float: right;font-family:arial; font-size:10px;}
 #comments form {padding: 10px; width: 100%;}

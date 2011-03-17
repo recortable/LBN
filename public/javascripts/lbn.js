@@ -73,7 +73,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
         if (draggable.size() > 0) {
             draggable.css({top: 0, left: 0});
-            draggable.css({cursor: 'move'});
+            //draggable.css({cursor: 'move'});
             updateDraggable(draggable.attr('data-position'));
             $(window).resize(function() {
                 if (draggable != null) updateDraggable(null);

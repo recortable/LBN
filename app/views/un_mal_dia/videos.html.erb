@@ -1,13 +1,15 @@
 <%= content_for :head do %>
-    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
     <style type="text/css">
         .insider {
             padding: 50px 0 0 10px;
         }
 
+        #playground {background-color: black;}
+
         #videos {
             width: 100%;
             overflow: hidden;
+            border: 0;
         }
 
         .video {
@@ -37,7 +39,6 @@
         }
 
         #draggable {
-            box-shadow: 1px 0 3px gray;
         }
 
     </style>
@@ -45,7 +46,7 @@
 <%= title 'Videos' %>
 
 <div id="playground" unselectable="on" class="unselectable" style="display:none;">
-  <div id="draggable" style="width: 1420px; height:1300px; padding-bottom:50px; background-color: rgba(255,255,255,0.8);">
+  <div id="draggable" style="width: 1420px; height:1300px; padding-bottom:50px;">
     <div class="insider">
       <div id="videos">
         <div class="video">
@@ -81,7 +82,7 @@
             <a href="#"><img src="/images/videos/tucumanexterior.jpg" width="400" height="297"/></a>
             <iframe src="http://player.vimeo.com/video/8816708" width="400" height="300" frameborder="0" style="display:none;"></iframe>
           </div>
-          <h3><a href="#" class="preview">Tucumán</a></h3>
+          <h3><a href="#" class="preview">Tucumán acústico</a></h3>
         </div>
         <div class="video">
           <div class="view">
