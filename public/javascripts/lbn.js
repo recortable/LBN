@@ -48,9 +48,9 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
     function loadCached() {
         setTimeout(function() {
-           $("div.cache").each(function() {
-               new Image().src = $(this).attr('data-src');
-           })
+            $("div.cache").each(function() {
+                new Image().src = $(this).attr('data-src');
+            })
         });
     }
 
@@ -194,7 +194,40 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
         initVideos();
         initComments();
+        initLinks();
     });
+
+    function initLinks() {
+        var link_pre = '<iframe title="YouTube video player" width="853" height="510" src="http://www.youtube.com/embed/';
+        var link_post = '?rel=0" frameborder="0" allowfullscreen></iframe>';
+        var regexp = /www\.youtube\.com\/watch\?v=(.*)/;
+
+        var closeVideoPlayer = function(callback) {
+            $("#videoplayer").fadeOut(function() {
+                $("#playground").fadeIn(callback);
+            });
+        };
+
+        $("a.close-video-player").click(function() {
+            closeVideoPlayer();
+            return false;
+        });
+
+        $("#playground a").click(function(event) {
+            var src = $(this).attr('href');
+            var match = regexp.exec(src);
+            if (match != null) {
+                event.stopPropagation();
+                $("#videoplayer .embed").html(link_pre + match[1] + link_post);
+                $("#videoplayer .video-new-window").attr('href', src);
+                $("#playground").fadeOut(function() {
+                    $("#videoplayer").fadeIn();
+
+                });
+                return false;
+            }
+        });
+    }
 
     function initComments() {
         var loaded = false; // if comments are loaded
@@ -226,9 +259,9 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 
         $("#comments form").live('submit', function(e) {
             var body = $("#comment_content").val();
-            var email =$("#comment_author").val();
+            var email = $("#comment_author").val();
             console.log(body, email);
-            $("#comments .comments").prepend("<p><span>Tu - </span>"+ body + "</p>");
+            $("#comments .comments").prepend("<p><span>Tu - </span>" + body + "</p>");
             $.post("/comments", {'comment[content]':body, 'comment[author]':email, 'lbn': 'lbn'});
             e.preventDefault();
         });

@@ -15,6 +15,16 @@
 <%= render :partial => '/layouts/controls' %>
 <%= yield %>
 
+<div id="videoplayer" style="display: none">
+  <div class="center">
+    <div class="viewport">
+      <div class="embed">Cargando vídeo...</div>
+      <a href="#" class="video-new-window" target="_newtab">Ver en YouTube</a> |
+      <a href="#" class="close-video-player">Cerrar</a>
+    </div>
+  </div>
+</div>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/javascripts/lbn.js"></script>

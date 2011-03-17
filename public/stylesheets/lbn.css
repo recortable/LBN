@@ -44,8 +44,16 @@ body#disco-aventuras {
 
 }
 
-.ui-draggable {cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;}
-.ui-draggable-dragging {cursor: url(https://mail.google.com/mail/images/2/closedhand.cur), default !important;}
+.ui-draggable {  cursor:grab;
+  cursor:-moz-grab;
+  cursor:-webkit-grab;
+  cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;}
+
+.ui-draggable-dragging {
+      cursor:grabbing;
+  cursor:-moz-grabbing;
+  cursor:-webkit-grabbing;
+    cursor: url(https://mail.google.com/mail/images/2/closedhand.cur), default !important;}
 
 #playground a.enlace {
     position: absolute;
@@ -53,7 +61,7 @@ body#disco-aventuras {
     overflow: hidden;
     text-indent: -1000px;
     z-index: 1000;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 #playground a.enlace:hover {
@@ -204,3 +212,9 @@ form a {  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ge
 }
 
 #working span {display: block; float: right; margin: 3px 1em 0 1em;}
+
+#videoplayer {position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: black; color: white;}
+#videoplayer .center {margin: 50% 0 0 50%; }
+#videoplayer .viewport {width: 860px; height: 540px; margin: -510px 0 0 -430px;}
+#videoplayer .embed {margin-bottom:10px;}
+#videoplayer a {color: gray; text-decoration:none; padding-top: 3px;}
