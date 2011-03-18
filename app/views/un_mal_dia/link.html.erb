@@ -7,17 +7,54 @@
   <meta name="Description" content="Las Buenas Noches - Un Mal día lo tiene cualquiera"/>
   <link href='http://fonts.googleapis.com/css?family=Bentham' rel='stylesheet' type='text/css'>
   <link rel="icon" href="/images/icon-cara.ico" type="image/x-icon">
-  <%= csrf_meta_tag %>
-  <link href="/stylesheets/lbn.css" rel="stylesheet" type="text/css" media="screen"/>
-  <%= yield :head %>
+  <style type="text/css">
+      html {
+          background-color: black;
+          font-family: 'Bentham', arial, serif;font-size:15px;
+      }
+
+      #videoplayer {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: black;
+          color: white;
+      }
+
+      #videoplayer .center {
+          margin: 50% 0 0 50%;
+      }
+
+      #videoplayer .viewport {
+          width: 860px;
+          height: 540px;
+          margin: -510px 0 0 -430px;
+      }
+
+      #videoplayer .embed {
+          margin-bottom: 10px;
+      }
+
+      #videoplayer a {
+          color: gray;
+          text-decoration: none;
+          padding-top: 3px;
+      }
+  </style>
 </head>
-<body id="disco-unmaldia">
-<%= render :partial => '/layouts/controls' %>
-<%= yield %>
+
+<div id="videoplayer">
+  <div class="center">
+    <div class="viewport">
+      <div class="embed"></div>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/javascripts/lbn.js"></script>
+<script type="text/javascript" src="/javascripts/simpletube.js"></script>
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

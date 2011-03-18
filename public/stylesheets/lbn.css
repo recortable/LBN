@@ -213,8 +213,3 @@ form a {  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ge
 
 #working span {display: block; float: right; margin: 3px 1em 0 1em;}
 
-#videoplayer {position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: black; color: white;}
-#videoplayer .center {margin: 50% 0 0 50%; }
-#videoplayer .viewport {width: 860px; height: 540px; margin: -510px 0 0 -430px;}
-#videoplayer .embed {margin-bottom:10px;}
-#videoplayer a {color: gray; text-decoration:none; padding-top: 3px;}

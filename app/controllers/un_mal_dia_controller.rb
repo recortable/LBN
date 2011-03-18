@@ -14,11 +14,13 @@ class UnMalDiaController < ApplicationController
   def videos
   end
 
-  def reloj
+  def link
+    render :action => 'link', :layout => false
+  end
 
+  def reloj
   end
 
   def lanada
-
   end
 end

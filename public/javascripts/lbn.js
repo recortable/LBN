@@ -198,34 +198,13 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     });
 
     function initLinks() {
-        var link_pre = '<iframe title="YouTube video player" width="853" height="510" src="http://www.youtube.com/embed/';
-        var link_post = '?rel=0" frameborder="0" allowfullscreen></iframe>';
         var regexp = /www\.youtube\.com\/watch\?v=(.*)/;
 
-        var closeVideoPlayer = function(callback) {
-            $("#videoplayer").fadeOut(function() {
-                $("#playground").fadeIn(callback);
-            });
-        };
-
-        $("a.close-video-player").click(function() {
-            closeVideoPlayer();
-            return false;
-        });
-
-        $("#playground a").click(function(event) {
+        $("#playground a").each(function() {
             var src = $(this).attr('href');
             var match = regexp.exec(src);
-            if (match != null) {
-                event.stopPropagation();
-                $("#videoplayer .embed").html(link_pre + match[1] + link_post);
-                $("#videoplayer .video-new-window").attr('href', src);
-                $("#playground").fadeOut(function() {
-                    $("#videoplayer").fadeIn();
-
-                });
-                return false;
-            }
+            if (match != null)
+                $(this).attr('href', '/enlace?y=' + match[1]);
         });
     }
 
