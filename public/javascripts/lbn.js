@@ -1,6 +1,8 @@
 if (typeof console == "undefined" || typeof console.log == "undefined") {
     console = {
         log : function(args) {
+        },
+        debug : function() {
         }
     };
 }
@@ -195,7 +197,28 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         initVideos();
         initComments();
         initLinks();
+        initLinker();
     });
+
+    var linker = null;
+
+    function initLinker() {
+        $("#linker").remove().appendTo('#draggable');
+        $("#draggable").click(function(e) {
+            if (linker == null || linker.width) {
+                linker = {
+                    left: e.pageX - parseInt($(this).css('left')),
+                    top: e.pageY - parseInt($(this).css('top'))
+                }
+            } else {
+                linker.width = (e.pageX - parseInt($(this).css('left'))) - linker.left;
+                linker.height = (e.pageY - parseInt($(this).css('top'))) - linker.top;
+                console.log("{left:" + linker.left + "px;top:" + linker.top + "px;width:" + linker.width + "px;height:" + linker.height + "px;}");
+                $("#linker").css({left:linker.left + "px", top: linker.top + "px", width:linker.width+"px",height:linker.height+"px"});
+            }
+
+        });
+    }
 
     function initLinks() {
         var regexp = /www\.youtube\.com\/watch\?v=(.*)/;

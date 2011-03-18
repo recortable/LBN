@@ -64,7 +64,7 @@ body#disco-aventuras {
     border-radius: 2px;
 }
 
-#playground a.enlace:hover {
+#playground a.enlace:hover, #linker {
     border: 1px solid white;
     box-shadow: 0px 0px 8px black;
 }
