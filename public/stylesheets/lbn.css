@@ -62,6 +62,7 @@ body#disco-aventuras {
     text-indent: -1000px;
     z-index: 1000;
     border-radius: 2px;
+    background-image:url(/images/transparent.gif)
 }
 
 #playground a.enlace:hover, #linker {
@@ -135,12 +136,18 @@ body#disco-aventuras {
 /*color: #222; texto */
 #comments a {text-decoration:none;color: #AAA;}
 #comments .list {width:200px; overflow: hidden; }
-#comments .comments {cursor:move;}
+#comments .comments {}
 #comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px;
-font-family: 'Bentham', arial, serif;font-size:15px;
-        letter-spacing: 0.07em; line-height:1.3em; color: #EEE;
+	font-family: arial, sans-serif;
+color: #EEE;
         text-shadow: 2px 1px 3px #020202; font-weight: 500;
 }
+body#disco-aventuras #comments .list p {
+	font-family: 'Bentham', arial, serif;font-size:15px;
+	        letter-spacing: 0.07em; line-height:1.3em;	
+}
+
+
 #comments p .time {font-weight:800;}
 #comments .close {float: right;font-family:arial; font-size:10px;}
 #comments form {padding: 10px; width: 100%;}
