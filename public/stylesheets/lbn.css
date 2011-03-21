@@ -41,7 +41,9 @@ body#disco-aventuras {
 #draggable {
     position: relative;
     z-index: 500;
-
+  cursor:-moz-grab;
+  cursor:-webkit-grab;
+  cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
 }
 
 .ui-draggable {  cursor:grab;

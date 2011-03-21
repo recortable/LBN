@@ -12,6 +12,7 @@ LBN::Application.routes.draw do
   match 'aventura-domestica' => 'aventuras#portada', :as => :aventuras_portada
   match 'canciones-aventuras-domesticas' => 'aventuras#canciones', :as => :canciones_aventuras
   match 'enlace' => 'un_mal_dia#link', :as => :link
+  match 'descargas' => 'site#downloads', :as => :downloads
 
   AventurasController::CANCIONES.each do |cancion|
     match cancion => 'aventuras#cancion', :defaults => {:title => cancion}

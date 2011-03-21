@@ -10,19 +10,12 @@
   <meta name="Author" content="Las Buenas Noches"/>
   <meta name="Keywords" content="música, music, folk, floclore, creative commons"/>
   <meta name="Description" content="Las Buenas Noches - Página web del grupo. Descarga los discos gratis."/>
-  <link href='http://fonts.googleapis.com/css?family=Bentham' rel='stylesheet' type='text/css'>
-  <!-- link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css' -->
-  <link rel="icon" href="/images/aventuras/aventuras.ico" type="image/x-icon">
-  <%= csrf_meta_tag %>
-  <link href="/stylesheets/lbn.css" rel="stylesheet" type="text/css" media="screen"/>
-  <%= yield :head %>
+<%= yield :head %>
 </head>
-<body id="disco-aventuras">
-<%= render :partial => '/layouts/controls' %>
+<body >
 <%= yield %>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
-<script type="text/javascript" src="/javascripts/lbn.js"></script>
 <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
