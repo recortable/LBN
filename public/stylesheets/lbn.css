@@ -168,7 +168,7 @@ body#disco-aventuras #comments .list p {
     width: 150px;
     height: 550px;
     padding: 10px;
-    z-index: 51000;
+    z-index: 49000;
     border-radius: 0 0 10px 0;
     -moz-border-radius: 10px 0 0 10px;
     box-shadow: 0 2px 5px black;
@@ -223,5 +223,6 @@ html.ie6 #working, html.ie7 #working {width: 16em;}
 html.ie6 #working img, html.ie7 #working img {float: left;}
 #working span {display: block; float: right; margin: 3px 1em 0 1em;}
 
-
+#browser {position: fixed; left: 10px; bottom: 0; padding: 1em; background-color: black; color: red; z-index: 50000; line-height: 1.5em;}
+#browser a {color: white; }
 

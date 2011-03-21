@@ -171,6 +171,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
     }
 
     $(function() {
+	    browserMessage();
         initPage();
         if ($("#player").length) {
             $("#controls").css('left', '180px');
@@ -268,5 +269,14 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             e.preventDefault();
         });
     }
+
+	function browserMessage() {
+		if ($("html.ie").length) {
+			$("#browser").show();
+		}
+		if ($("html.ie6").length) {
+			$("#ie6").show();
+		}
+	}
 
 })(jQuery);
