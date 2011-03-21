@@ -142,10 +142,10 @@ html.ie6 #controls, html.ie7 #controls {width: 38em;}
 #comments .list {width:200px; overflow: hidden; }
 #comments .comments {}
 #comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px;
-	font-family: arial, sans-serif;
-color: #EEE;
-        text-shadow: 2px 1px 3px #020202; font-weight: 500;
-}
+	font-family: arial, sans-serif; color: #EEE; text-shadow: 2px 1px 3px #020202; font-weight: 500;}
+#comments .facebook {width: 180px; margin: 5px; color: #3b5998; border-bottom: 1px solid #3b5998;}
+#comments .facebook a {display: block; padding: 3px 0; color: #3b5998;}
+
 body#disco-aventuras #comments .list p {
 	font-family: 'Bentham', arial, serif;font-size:15px;
 	        letter-spacing: 0.07em; line-height:1.3em;	
@@ -154,8 +154,9 @@ body#disco-aventuras #comments .list p {
 
 #comments p .time {font-weight:800;}
 #comments .close {float: right;font-family:arial; font-size:10px;}
-#comments form {padding: 10px; width: 100%;}
-#comments form textarea {width: 170px; background-color: white;}
+#comments form h3 {padding-bottom: 5px;}
+#comments form {padding: 10px; width: 100%; color: gray; }
+#comments form textarea, #comments form input[type=text] {width: 170px; background-color: white; border: 0; padding: 2px;}
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
@@ -168,14 +169,18 @@ body#disco-aventuras #comments .list p {
     top: 0;
     background-color: #020b0a;
     width: 150px;
-    height: 550px;
+    height: 600px;
     padding: 10px;
     z-index: 49000;
     border-radius: 0 0 10px 0;
     -moz-border-radius: 10px 0 0 10px;
     box-shadow: 0 2px 5px black;
 }
-#player.aventuras {height:570px;}
+#player a {color: #F6CB9F; text-decoration: none; display: block; padding: 0px 0 10px 0; font-size: 15px; text-align:center;}
+#player a:hover {color: white;}
+#player.aventuras {height:620px;}
+#player.aventuras a {color: #c81046;}
+#player.aventuras a:hover {color: white;}
 
 *.unselectable {
     -moz-user-select: -moz-none;

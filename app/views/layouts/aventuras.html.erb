@@ -23,13 +23,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/javascripts/lbn.js"></script>
-<script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-    var pageTracker = _gat._getTracker("UA-3241357-6");
-    pageTracker._trackPageview();
-</script>
+<%= render :partial => 'layouts/ga' %>
+
 </body>
 </html>

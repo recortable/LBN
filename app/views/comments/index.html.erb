@@ -1,5 +1,14 @@
 <div class="list">
+	<div class="facebook">
+		<a href="http://www.facebook.com/LasBuenasNoches">LBN en facebook</a>
+		<iframe src="http://www.facebook.com/plugins/like.php?href=http://lasbuenasnoches.com"
+		        scrolling="no" frameborder="0"
+		        style="border:none; width:180px; height:28px">
+		</iframe>
+	</div>
+	
   <%= form_for @comment do |form| %>
+	<h3>Escríbenos</h3>
       <div>Email: (no saldrá publicado)</div>
       <%= form.text_field :author %>
       <%= form.text_area :content %>
