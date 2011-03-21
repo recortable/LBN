@@ -91,6 +91,8 @@ body#disco-aventuras {
     box-shadow: 0 2px 5px black;
 }
 
+html.ie6 #controls, html.ie7 #controls {width: 38em;}
+
 #controls ul {
     width: 100%;
     overflow: hidden;
@@ -217,6 +219,9 @@ form a {  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Ge
     box-shadow: 0 2px 5px black;
     color: yellow;
 }
-
+html.ie6 #working, html.ie7 #working {width: 16em;}
+html.ie6 #working img, html.ie7 #working img {float: left;}
 #working span {display: block; float: right; margin: 3px 1em 0 1em;}
+
+
 

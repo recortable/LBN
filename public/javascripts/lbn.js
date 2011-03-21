@@ -61,10 +61,10 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             var image_url = source.attr('src');
             console.log("Waiting for " + image_url);
             var img = new Image();
-            img.src = image_url;
             $(img).load(function() {
                 callback(image_url);
             });
+            img.src = image_url;
         }
     }
 
