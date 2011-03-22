@@ -1,0 +1,9 @@
+<h1>Enviar email de nuevo disco</h1>
+
+<%= form_tag admin_emails_path do %>
+<p>
+<label>Destinatarios:</label>
+<%= text_area_tag :recipients, '', :rows => 10, :cols => 80 %>
+</p>
+<%= submit_tag 'Enviar' %>
+<% end %>

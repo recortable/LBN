@@ -16,5 +16,6 @@ module LBN
     config.i18n.default_locale = :es
     config.encoding = "utf-8"
     config.filter_parameters += [:password]
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
   end
 end
