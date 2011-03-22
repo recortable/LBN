@@ -1,11 +1,6 @@
 <%= content_for :head do %>
     <style type="text/css">
-        #clismon {
-            left: 3120px;
-            width: 310px;
-            top: 845px;
-            height: 55px;
-        }
+        #clismon {left:3263px;top:880px;width:192px;height:48px;}
     </style>
 <% end %>
 
@@ -25,15 +20,15 @@
 <%= title 'Las Dos Caras' %>
 
 
-<div id="playground" unselectable="on" class="unselectable" style="display:none;background-color: #15100a;">
-  <div id="draggable" style="width: 3744px; height:1772px; margin: 0 0px 0 150px; background-color: #15100a;" data-position="leftTop">
-    <img id="img_canciones" src="/images/canciones-peq.jpg" alt="Portada" width="3541" height="1772"/>
+<div id="playground" unselectable="on" class="unselectable" style="background-color: #15100a;">
+  <div id="draggable" style="width: 3744px; height:1836px; margin: 0 0px 0 150px; background-color: #15100a;" data-position="leftTop">
+    <img id="img_canciones" src="/images/unmaldia/canciones-peq.jpg" alt="Portada" width="3638" height="1836"/>
     <%= link_to 'Clismón', 'http://clismon.net', :id => 'clismon', :class => 'enlace' %>
 
   </div>
 </div>
 
 <div class="image-cache" style="display:none">
-  <img class="replacement" data-original="#img_canciones" src="/images/canciones.jpg"/>
-  <img class="cache" src="/images/interior.jpg"/>
+  <img class="replacement" data-original="#img_canciones" src="/images/unmaldia/canciones.jpg"/>
+  <!--img class="cache" src="/images/interior.jpg"/-->
 </div>

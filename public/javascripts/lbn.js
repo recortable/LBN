@@ -108,7 +108,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         }
 
         if (setPosition == 'leftBottom') {
-            draggable.css({left: 0, top: y1});
+            draggable.animate({left: 0, top: y1}, 1000);
         } else if (setPosition == 'leftTop') {
             draggable.css({left: 0, top: 0});
         }
