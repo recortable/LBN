@@ -157,6 +157,7 @@ body#disco-aventuras #comments .list p {
 #comments form h3 {padding-bottom: 5px;}
 #comments form {padding: 10px; width: 100%; color: gray; }
 #comments form textarea, #comments form input[type=text] {width: 170px; background-color: white; border: 0; padding: 2px;}
+#comments textarea {height: 6em;}
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
