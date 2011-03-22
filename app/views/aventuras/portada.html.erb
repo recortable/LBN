@@ -14,18 +14,15 @@
             height: 560px;
         }
 
-        #lanada {
-            left: 200px;
-            top: 100px;
-            width: 70px;
-            height: 40px;
-        }
+        #lanada {left:195px;top:109px;width:64px;height:39px;}
         #aventuras-canciones {
             left: 1670px;
             top: 560px;
             width: 470px;
             height: 464px;
         }
+#indians {left:1389px;top:591px;width:209px;height:133px;}
+#jazz {left:955px;top:933px;width:146px;height:83px;}
     </style>
 <% end %>
 <%= title 'Aventura Doméstica' %>
@@ -37,6 +34,8 @@
     <%= link_to 'La nada', lanada_path, :id => 'lanada', :class => 'enlace' %>
     <%= link_to 'Aventuras Domésticas: Canciones', canciones_aventuras_path, :id => 'aventuras-canciones', :class => 'enlace' %>
     <%= link_to 'El Reloj', reloj_path, :id => 'reloj', :class => 'enlace' %>
+    <%= link_to 'El Jazz', 'http://www.youtube.com/watch?v=JwZd4VkCG5o', :id => 'jazz', :class => 'enlace' %>
+    <%= link_to 'Vienen los indios', 'http://www.youtube.com/watch?v=zbR6YZs8hqs', :id => 'indians', :class => 'enlace' %>
   </div>
 </div>
 <div class="image-cache" style="display:none">
