@@ -37,16 +37,22 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
                 $(original_selector).attr('src', image_url);
                 total--;
                 if (total == 0) {
-                    $("#working").slideUp(500);
-                    loadCached();
+	finishReplacements();
                 }
             });
         });
         if (total == 0) {
-            $("#working").slideUp(500);
-            loadCached();
-        }
+	finishReplacements();
+	 }
     }
+
+var replacementsDone = false;
+function finishReplacements() {
+	replacementsDone = true;
+	$("a").show();
+    $("#working").slideUp(500);
+    loadCached();	
+}
 
     function loadCached() {
         setTimeout(function() {
@@ -170,36 +176,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
         });
     }
 
-    $(function() {
-	    browserMessage();
-        initPage();
-        if ($("#player").length) {
-            $("#controls").css('left', '180px');
-        }
 
-        $("a.cancion-pequena").click(function() {
-            ajax = true;
-            $.get($(this).attr('href') + "?ajax=true", function(data) {
-                $("#songs").fadeOut(function() {
-                    $("#content").hide().html(data).fadeIn();
-                });
-            });
-            return false;
-        });
-
-        $("#canciones-aventuras").click(function() {
-            return showSongs();
-        });
-
-        $(".song-image a").live('click', function() {
-            return showSongs();
-        });
-
-        initVideos();
-        initComments();
-        initLinks();
-        initLinker();
-    });
 
     var linker = null;
 
@@ -268,6 +245,7 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
             $.post("/comments", {'comment[content]':body, 'comment[author]':email, 'lbn': 'lbn'});
             e.preventDefault();
         });
+
     }
 
 	function browserMessage() {
@@ -278,5 +256,38 @@ if (typeof console == "undefined" || typeof console.log == "undefined") {
 			$("#ie6").show();
 		}
 	}
+
+
+    $(function() {
+		$("a").hide();
+	    browserMessage();
+        initPage();
+        if ($("#player").length) {
+            $("#controls").css('left', '180px');
+        }
+
+        $("a.cancion-pequena").click(function() {
+            ajax = true;
+            $.get($(this).attr('href') + "?ajax=true", function(data) {
+                $("#songs").fadeOut(function() {
+                    $("#content").hide().html(data).fadeIn();
+                });
+            });
+            return false;
+        });
+
+        $("#canciones-aventuras").click(function() {
+            return showSongs();
+        });
+
+        $(".song-image a").live('click', function() {
+            return showSongs();
+        });
+
+        initVideos();
+        initComments();
+        initLinks();
+        initLinker();
+    });
 
 })(jQuery);
