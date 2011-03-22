@@ -10,8 +10,9 @@ class LbnMailer < ActionMailer::Base
     mail(:to => EMAILS, :subject => "Han comentao la (nueva) web")
   end
   
-  def nuevo_disco(emails)
-    mail(:to => emails, :subject => "Nuevo disco de Las Buenas Noches - Descarga gratuita en http://lasbuenasnoches.com")
+  def content_email(recipients, body)
+    @content = body
+    mail(:to => recipients, :subject => "Nuevo disco de Las Buenas Noches")
   end
 
 end

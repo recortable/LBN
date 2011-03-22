@@ -12,7 +12,8 @@ class Admin::EmailsController < ApplicationController
   end
   
   def create
+    @body = params[:body]
     @recipients = params[:recipients]
-    LbnMailer.nuevo_disco(@recipients).deliver
+    LbnMailer.content_email(@recipients, @body).deliver
   end  
 end
