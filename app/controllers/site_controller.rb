@@ -1,5 +1,11 @@
 class SiteController < ApplicationController
+  layout 'site'
+  
   def downloads
-    render :action => 'downloads', :layout => 'site'
+    
+  end
+  
+  def announcement
+    
   end
 end
