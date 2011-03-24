@@ -257,6 +257,13 @@ function finishReplacements() {
 		}
 	}
 
+	function initDownloadEvents() {
+		$("a.download").click(function() {
+			recordOutboundLink(this, 'Descargas', $(this).attr('id'));
+			return false;
+		})
+	}
+
 
     $(function() {
 		$("a").hide();
@@ -288,6 +295,7 @@ function finishReplacements() {
         initComments();
         initLinks();
         initLinker();
+initDownloadEvents();
     });
 
 })(jQuery);
