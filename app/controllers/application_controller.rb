@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
 
   protected
   def cache_page
-    response.headers['Cache-Control'] = 'public, max-age=300000' if Rails.env.production?
+    age = 1 * 60 * 60
+    response.headers['Cache-Control'] = "public, max-age=#{age}" if Rails.env.production?
   end
   
   def authenticate
