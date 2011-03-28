@@ -41,21 +41,24 @@ body#disco-aventuras {
 #draggable {
     position: relative;
     z-index: 500;
-  cursor:-moz-grab;
-  cursor:-webkit-grab;
-  cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
 }
 
-.ui-draggable {  cursor:grab;
-  cursor:-moz-grab;
-  cursor:-webkit-grab;
-  cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;}
+.ui-draggable {
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+}
 
 .ui-draggable-dragging {
-      cursor:grabbing;
-  cursor:-moz-grabbing;
-  cursor:-webkit-grabbing;
-    cursor: url(https://mail.google.com/mail/images/2/closedhand.cur), default !important;}
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    cursor: url(https://mail.google.com/mail/images/2/closedhand.cur), default !important;
+}
 
 #playground a.enlace {
     position: absolute;
@@ -64,7 +67,7 @@ body#disco-aventuras {
     text-indent: -1000px;
     z-index: 1000;
     border-radius: 2px;
-    background-image:url(/images/transparent.gif)
+    background-image: url(/images/transparent.gif)
 }
 
 #playground a.enlace:hover, #linker {
@@ -84,7 +87,8 @@ body#disco-aventuras {
 #controls {
     position: fixed;
     left: 10px;
-    top: 0px;
+    top: 0;
+    margin-right: 10em;
     background-color: #020b0a;
     padding: 0.5em 1em;
     z-index: 50000;
@@ -93,7 +97,9 @@ body#disco-aventuras {
     box-shadow: 0 2px 5px black;
 }
 
-html.ie6 #controls, html.ie7 #controls {width: 38em;}
+html.ie6 #controls, html.ie7 #controls {
+    width: 38em;
+}
 
 #controls ul {
     width: 100%;
@@ -122,42 +128,93 @@ html.ie6 #controls, html.ie7 #controls {width: 38em;}
     top: 0;
     right: 0;
     bottom: 0;
-    width: 200px;
-    /*background-color: #dfdfdf;*/
+    width: 200px; /*background-color: #dfdfdf;*/
     background-color: #020b0a;
-    box-shadow: -2px -2px 5px #020b0a;
-    /*box-shadow: -2px -2px 5px #dfdfdf;*/
+    box-shadow: -2px -2px 5px #020b0a; /*box-shadow: -2px -2px 5px #dfdfdf;*/
     -webkit-box-shadow: -2px -0px 5px #020b0a;
     -moz-box-shadow: -2px -2px 5px #020b0a;
-    z-index: 3000;
-    /*font-family: 'Goudy Bookletter 1911', arial, serif;*/
-    /*font-size: 14px;*/
-    line-height: 1.4em;
-    /*color: #222;*/
-    /*font-weight: 500;*/
+    z-index: 3000; /*font-family: 'Goudy Bookletter 1911', arial, serif;*/
+/*font-size: 14px;*/
+    line-height: 1.4em; /*color: #222;*/
+/*font-weight: 500;*/
     color: #EFEFEF;
 }
-/*color: #222; texto */
-#comments a {text-decoration:none;color: #AAA;}
-#comments .list {width:200px; overflow: hidden; }
-#comments .comments {}
-#comments .list p {display: block;  margin: 5px;  padding: 0.5em; width: 180px;
-	font-family: arial, sans-serif; color: #EEE; text-shadow: 2px 1px 3px #020202; font-weight: 500;}
-#comments .facebook {width: 180px; margin: 5px; color: #3b5998; border-bottom: 1px solid #3b5998;}
-#comments .facebook a {display: block; padding: 3px 0; color: #3b5998;}
 
-body#disco-aventuras #comments .list p {
-	font-family: 'Bentham', arial, serif;font-size:15px;
-	        letter-spacing: 0.07em; line-height:1.3em;	
+/*color: #222; texto */
+#comments a {
+    text-decoration: none;
+    color: #AAA;
 }
 
+#comments .list {
+    width: 200px;
+    overflow: hidden;
+}
 
-#comments p .time {font-weight:800;}
-#comments .close {float: right;font-family:arial; font-size:10px;}
-#comments form h3 {padding-bottom: 5px;}
-#comments form {padding: 10px; width: 100%; color: gray; }
-#comments form textarea, #comments form input[type=text] {width: 170px; background-color: white; border: 0; padding: 2px;}
-#comments textarea {height: 6em;}
+#comments .comments {
+}
+
+#comments .list p {
+    display: block;
+    margin: 5px;
+    padding: 0.5em;
+    width: 180px;
+    font-family: arial, sans-serif;
+    color: #EEE;
+    text-shadow: 2px 1px 3px #020202;
+    font-weight: 500;
+}
+
+#comments .facebook {
+    width: 180px;
+    margin: 3em 5px 5px 5px;
+    color: #3b5998;
+    border-bottom: 1px solid #3b5998;
+}
+
+#comments .facebook a {
+    display: block;
+    padding: 3px 0;
+    color: #3b5998;
+}
+
+body#disco-aventuras #comments .list p {
+    font-family: 'Bentham', arial, serif;
+    font-size: 15px;
+    letter-spacing: 0.07em;
+    line-height: 1.3em;
+}
+
+#comments p .time {
+    font-weight: 800;
+}
+
+#comments .close {
+    float: right;
+    font-family: arial;
+    font-size: 10px;
+}
+
+#comments form h3 {
+    padding-bottom: 5px;
+}
+
+#comments form {
+    padding: 10px;
+    width: 100%;
+    color: gray;
+}
+
+#comments form textarea, #comments form input[type=text] {
+    width: 170px;
+    background-color: white;
+    border: 0;
+    padding: 2px;
+}
+
+#comments textarea {
+    height: 6em;
+}
 
 #disco-aventuras #controls {
     box-shadow: 2px 2px 5px #222;
@@ -177,11 +234,31 @@ body#disco-aventuras #comments .list p {
     -moz-border-radius: 10px 0 0 10px;
     box-shadow: 0 2px 5px black;
 }
-#player a {color: #F6CB9F; text-decoration: none; display: block; padding: 0px 0 10px 0; font-size: 15px; text-align:center;}
-#player a:hover {color: white;}
-#player.aventuras {height:620px;}
-#player.aventuras a {color: #c81046;}
-#player.aventuras a:hover {color: white;}
+
+#player a {
+    color: #F6CB9F;
+    text-decoration: none;
+    display: block;
+    padding: 0px 0 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+#player a:hover {
+    color: white;
+}
+
+#player.aventuras {
+    height: 620px;
+}
+
+#player.aventuras a {
+    color: #c81046;
+}
+
+#player.aventuras a:hover {
+    color: white;
+}
 
 *.unselectable {
     -moz-user-select: -moz-none;
@@ -191,46 +268,60 @@ body#disco-aventuras #comments .list p {
     user-select: none;
 }
 
-form textarea {margin: 10px 0; border: 1px solid gray; padding:2px;background-color:#eaeaea;}
-form a {  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  font-size: 11px;
+form textarea {
+    margin: 10px 0;
+    border: 1px solid gray;
+    padding: 2px;
+    background-color: #eaeaea;
 }
+
+form a {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 11px;
+}
+
 .button-clean-gray, form input[type=submit] {
-  background: #eee;
-  background: -moz-linear-gradient(top, #eee 0%, #ccc 100%);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ccc));
-  border: 1px solid #ccc;
-  border-bottom: 1px solid #bbb;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  color: #555;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  font-size: 11px;
-  font-weight: normal;
-  line-height: 1;
-  padding: 3px 1em;
-  text-align: center;
-  text-shadow: 0 1px 0 #eee;
-  margin-right: 0.5em;
+    background: #eee;
+    background: -moz-linear-gradient(top, #eee 0%, #ccc 100%);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ccc));
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #555;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1;
+    padding: 3px 1em;
+    text-align: center;
+    text-shadow: 0 1px 0 #eee;
+    margin-right: 0.5em;
 }
 
-#working {
+
+#info {
     position: fixed;
-    right: 10px;
-    top: 0px;
-    background-color: #020b0a;
-    padding: 0.5em 1em;
-    z-index: 50000;
-    border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    box-shadow: 0 2px 5px black;
-    color: yellow;
-}
-html.ie6 #working, html.ie7 #working {width: 16em;}
-html.ie6 #working img, html.ie7 #working img {float: left;}
-#working span {display: block; float: right; margin: 3px 1em 0 1em;}
+    right: 0;
+    top: 0;
+    margin-left: 42em;
 
-#browser {position: fixed; left: 10px; bottom: 0; padding: 1em; background-color: black; color: red; z-index: 50000; line-height: 1.5em;}
-#browser a {color: white; }
+    background-color: #020b0a;
+    padding: 0em 1em;
+    z-index: 60000;
+    border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
+    box-shadow: -1px 1px 2px black;
+    color: #efefef;
+    opacity:0.7;
+    -moz-opacity:0.9;
+}
+#info span {display: block; margin: 0.3em 0;}
+#info a {color: white;}
+
+#browser {color: #006400;}
+#ie6 {color: #c00;}
+#working {color: yellow;}
+#working img {float: left;}
 

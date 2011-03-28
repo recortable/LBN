@@ -22,7 +22,8 @@
 
     <div id="container" style="">
       <div class="row">
-        <a id="canciones-aventuras" href="<%= canciones_aventuras_path %>"><img id="lbn" src="/images/aventuras/aventuras.png"/></a>
+        <a id="canciones-aventuras" href="<%= canciones_aventuras_path %>" data-hint="Canciones"
+        ><img id="lbn" src="/images/aventuras/aventuras.png"/></a>
       </div>
 
       <div id="songs">
@@ -31,7 +32,8 @@
                 <div class="row">
             <% end %>
             <div class="song">
-              <%= link_to cancion, cancion, :id => "pequena-#{cancion}", :class => 'cancion-pequena' %>
+              <%= link_to AventurasController::TITULOS[index],
+                  cancion, :id => "pequena-#{cancion}", :class => 'cancion-pequena' %>
             </div>
             <% if (index + 1) % 4 == 0 %>
                 </div>

@@ -119,7 +119,7 @@
         #arrebato {left:2108px;top:319px;width:132px;height:139px;}
         #edu {left:1372px;top:943px;width:94px;height:108px;}
 		#piano {left:1712px;top:756px;width:50px;height:99px;}
-		#pelota {left:975px;top:1042px;width:52px;height:47px;}
+		#pelota {left:975px;top:1038px;width:50px;height:50px;}
 		#enredadera {left:47px;top:515px;width:125px;height:193px;}
     </style>
 <% end %>
@@ -129,25 +129,25 @@
 <div id="playground" unselectable="on" class="unselectable" style="background-color: #15100a;">
   <div id="draggable" style="width: 2559px; height:1240px;" data-position="leftBottom">
     <img id="img_interior" src="/images/unmaldia/interior-peq.jpg" alt="Un Mal Día (Lo tiene cualquiera)" width="2559" height="1240"/>
-    <%= link_to 'Canciones', canciones_path, :id => 'unmaldia-canciones', :class => 'enlace' %>
-    <%= link_to 'Periódico diagonal', 'http://www.diagonalperiodico.net/', :id => 'periodico-diagonal', :class => 'enlace' %>
+    <%= link_to 'Escuchar y descargar', canciones_path, :id => 'unmaldia-canciones', :class => 'enlace' %>
+    <%= link_to 'Lee esto!', 'http://www.diagonalperiodico.net/', :id => 'periodico-diagonal', :class => 'enlace' %>
     <%= link_to 'Aventuras Domésticas', aventuras_portada_path, :id => 'aventuras-portada', :class => 'enlace' %>
     <%= link_to 'Aventuras Domésticas', aventuras_portada_path, :id => 'incendio', :class => 'enlace' %>
     <%= link_to 'La primera persona programadora', 'http://es.wikipedia.org/wiki/Ada_Lovelace', :id => 'lovelace', :class => 'enlace' %>
     <%= link_to 'Tres amigos', 'http://www.youtube.com/watch?v=WohoxIhOpTk', :id => 'ferlosio', :class => 'enlace' %>
-    <%= link_to 'Daniel Cuberta', 'http://www.danielcuberta.com/', :id => 'cuberta', :class => 'enlace' %>
-    <%= link_to 'Gnawa', 'http://www.youtube.com/watch?v=Sq0EH4g3DZg', :id => 'gnawa', :class => 'enlace' %>
+    <%= link_to 'Interrumpimos la emisión', 'http://www.danielcuberta.com/', :id => 'cuberta', :class => 'enlace' %>
+    <%= link_to 'Sorprendentemente cerca de aquí', 'http://www.youtube.com/watch?v=Sq0EH4g3DZg', :id => 'gnawa', :class => 'enlace' %>
     <%= link_to 'No estoy a la moda', 'http://www.youtube.com/watch?v=mNA-4tnM_xY', :id => 'lcd', :class => 'enlace' %>
     <%= link_to 'Todos los días', 'http://www.youtube.com/watch?v=GMezwtB1oCU', :id => 'everyday', :class => 'enlace' %>
     <%= link_to 'El Becerrito', 'http://www.youtube.com/watch?v=ujy0KSGWYkM', :id => 'simon', :class => 'enlace' %>
-    <%= link_to 'La Panaderia', 'http://despachodepan.com/', :id => 'pan', :class => 'enlace' %>
-    <%= link_to 'Guitarra', 'http://www.youtube.com/watch?v=H6BiwajDrYA', :id => 'guitarra', :class => 'enlace' %>
+    <%= link_to 'Nos sentamos', 'http://despachodepan.com/', :id => 'pan', :class => 'enlace' %>
+    <%= link_to 'Así se toca...', 'http://www.youtube.com/watch?v=H6BiwajDrYA', :id => 'guitarra', :class => 'enlace' %>
     <%= link_to 'Nina', 'http://www.youtube.com/watch?v=65rz61qOwhc', :id => 'nina', :class => 'enlace' %>
     <%= link_to 'Gene Krupa', 'http://www.youtube.com/watch?v=j9J5Zt2Obko', :id => 'krupa', :class => 'enlace' %>
-    <%= link_to 'How to make a vinyl', 'http://www.youtube.com/watch?v=Ln2E6Sc7YJE', :id => 'vinyl', :class => 'enlace' %>
+    <%= link_to 'Así se hacía un disco', 'http://www.youtube.com/watch?v=Ln2E6Sc7YJE', :id => 'vinyl', :class => 'enlace' %>
     <%= link_to 'Are you really ready?', 'http://www.youtube.com/watch?v=RHXtB9ssnhw', :id => 'ready', :class => 'enlace' %>
     <%= link_to 'Banjo en la terraza', 'http://www.youtube.com/watch?v=WGgoW9OWM80', :id => 'banjo', :class => 'enlace' %>
-    <%= link_to 'Discos saturno', 'http://saturnorecords.com/', :id => 'saturno', :class => 'enlace' %>
+    <%= link_to 'Una discográfica que, por supuesto, pierde dinero', 'http://saturnorecords.com/', :id => 'saturno', :class => 'enlace' %>
     <%= link_to 'Ko to tamo peva', 'http://www.youtube.com/watch?v=0uCTJ7hkX-k', :id => 'romani', :class => 'enlace' %>
     <%= link_to 'La pura verdad', 'http://www.youtube.com/watch?v=QIyMt1bs1_0', :id => 'atahualpa', :class => 'enlace' %>
     <%= link_to 'Sin luz', 'http://www.youtube.com/watch?v=mgnFMMm86rw', :id => 'sinluz', :class => 'enlace' %>
@@ -155,8 +155,8 @@
     <%= link_to 'Arrebato', 'http://www.youtube.com/watch?v=NOD3fp8cY5s', :id => 'arrebato', :class => 'enlace' %>
     <%= link_to 'Cambiar paradigmas', 'http://www.youtube.com/watch?v=Z78aaeJR8no', :id => 'edu', :class => 'enlace' %>
     <%= link_to 'Tócala otra vez', 'http://www.youtube.com/watch?v=H3MSnbNleJA', :id => 'piano', :class => 'enlace' %>
-    <%= link_to 'En el rancho', 'http://enelrancho.com/', :id => 'enredadera', :class => 'enlace' %>
-    <%= link_to 'La hecatombe', 'http://www.lahecatombe.es/', :id => 'pelota', :class => 'enlace' %>
+    <%= link_to 'Se está bien en el rancho', 'http://enelrancho.com/', :id => 'enredadera', :class => 'enlace' %>
+    <%= link_to 'Estamos en ello', 'http://www.lahecatombe.es/', :id => 'pelota', :class => 'enlace' %>
 
   </div>
 </div>

@@ -201,7 +201,15 @@ function finishReplacements() {
     function initLinks() {
         var regexp = /www\.youtube\.com\/watch\?v=(.*)/;
 
+        var previous = '';
         $("#playground a").each(function() {
+            $(this).hover(function() {
+                previous = $("#message").html();
+                var hint = $(this).data('hint') || $(this).text();
+                $("#message").text(hint);
+            }, function() {
+                $("#message").html(previous);
+            });
             var src = $(this).attr('href');
             var match = regexp.exec(src);
             if (match != null)
@@ -217,6 +225,8 @@ function finishReplacements() {
         comments.css('width', '0').show();
         var offset = $("#comments").offset().left - width;
 
+        var older_message = "";
+
         $("a.toggleComment").live('click', function() {
             if (comments.width() == 0) {
                 if (!loaded) {
@@ -228,10 +238,13 @@ function finishReplacements() {
                 }
                 $("#comments .list").css('top', 0);
                 comments.animate({'width': width});
+                older_message = $("#message").text();
+                $("#message").html('<a class="toggleComment" href="#">Ocultar comentarios</a>');
                 //playground.animate({right : width}, updateDraggable);
 
             } else {
                 comments.animate({'width': 0});
+                $("#message").text(older_message);
                 //playground.animate({right: 0}, updateDraggable);
             }
             return false;
