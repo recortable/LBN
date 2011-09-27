@@ -278,6 +278,18 @@ function finishReplacements() {
 	}
 
 
+    function initConcerts() {
+        var MINI_WIDTH = 20;
+        $("#conciertos").click(function() {
+           var $this = $(this);
+           if ($this.hasClass('mini')) {
+               $this.animate({'left': 0}, 500).removeClass('mini');
+           } else {
+               $this.animate({'left': -1 * ($this.width() - MINI_WIDTH)}, 500).addClass('mini');
+           }
+        });
+    }
+
     $(function() {
 		$("a").hide();
 	    browserMessage();
@@ -308,7 +320,7 @@ function finishReplacements() {
         initComments();
         initLinks();
         initLinker();
-initDownloadEvents();
+        initConcerts();
+        initDownloadEvents();
     });
-
 })(jQuery);

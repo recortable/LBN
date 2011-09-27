@@ -25,11 +25,21 @@
         }
 
         #monoblanco {left:1091px;top:414px;width:124px;height:121px;}
-        #krupa {
-            left: 1525px;
-            top: 520px;
-            width: 40px;
-            height: 40px;
+        #krupa {left: 1525px;top: 520px;width: 40px;height: 40px;}
+
+        #conciertos {
+            position: fixed;
+            left: 0;
+            top: 50px;
+            width: 394px;
+            height: 595px;
+            background: url('/images/conciertos-octubre.jpg') no-repeat;
+            overflow: hidden;
+            text-indent: -10000px;
+            z-index: 9000;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 2px 2px 3px #222;
+            cursor: pointer;
         }
     </style>
 <% end %>
@@ -43,6 +53,15 @@
     <%= link_to 'Estudio La Mina', 'http://www.myspace.com/grabacionesenlamina', :id => 'estudio', :class => 'enlace' %>
     <%= link_to 'El mundo se acaba', 'http://www.youtube.com/watch?v=13UqjyrXQlk', :id => 'monoblanco', :class => 'enlace' %>
   </div>
+</div>
+
+<div id="conciertos">
+  <h3>Próximos conciertos</h3>
+  <ul>
+    <li>Café la Palma. Martes 25 de Octubre, 22:00h. c/La Palma, 62. Madrid</li>
+    <li>Gala de los Oxcars (tocaremos un par de temas). Jueves 27 de Octubre, 20:30h. Sala Apolo, Barcelona</li>
+    <li>Helogàbal. Viernes 28 de Octubre, 22:00h. c/Ramón y Cajal, 80, Barcelona.</li>
+  </ul>
 </div>
 
 <div class="image-cache" style="display:none">
