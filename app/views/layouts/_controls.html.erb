@@ -1,9 +1,10 @@
 <div id="controls" style="display:none;">
   <ul>
     <li><a href="<%= root_path %>"><span>Las&nbsp;Buenas&nbsp;Noches</span></a></li>
+    <li><%= link_to content_tag(:span, 'Discos'), downloads_path %></li>
+    <li><a href="<%= videos_path %>"><span>Vídeos</span></a></li>
     <li><a href="<%= unmaldia_path %>"><span>Un&nbsp;Mal&nbsp;Día</span></a></li>
     <li><a href="<%= aventuras_path %>"><span>Aventuras&nbsp;Domésticas</span></a></li>
-    <li><a href="<%= videos_path %>"><span>Vídeos</span></a></li>
     <li><a href="#" class="toggleComment"><span>Comentar</span></a></li>
   </ul>
 </div>

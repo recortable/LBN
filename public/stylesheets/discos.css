@@ -1,0 +1,58 @@
+html {
+    background: transparent url('/images/descargas/fondo.jpg') repeat top left;
+    font-family: Times serif;
+    font-size: 20px;
+    color: #333333;
+}
+
+h1, h2, h3 {margin: 0; padding:  0;}
+h1 {display: none;}
+h2 {margin-top: 20px;;}
+h3 {color: #9b4b4a; margin-top: 30px; font-size: 90%;}
+
+
+ul {margin: 10px 0; padding: 0; font-size: 17px;}
+ul li {margin: 10px 0; padding: 0; list-style: none; color: #664b40; }
+ul li b {display: block; color: black; font-weight: normal;}
+
+#page {
+    width: 1140px;
+    margin: 50px auto;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.col {
+    float: left;
+    width: 400px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.col.aventuras {
+    margin: 0;
+}
+
+.col.venta {
+    width: 300px;
+}
+.col.venta h2 {font-size: 90%;}
+
+div.info {
+    color: #664b40;
+}
+
+div.quotes p {
+    text-align: left;
+    color: #222222;
+}
+
+span.author {
+    font-weight: bold;
+}
+
+div.editado {margin: 10px 0; font-size: 90%;}
+

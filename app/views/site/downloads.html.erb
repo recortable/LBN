@@ -1,28 +1,94 @@
-<% title 'Descargas' %>
+<%= title 'Descarga y venta de discos' %>
 
 <%= content_for :head do %>
-<link rel="icon" href="/images/descargas/favicon.ico" type="image/x-icon">
-
-    <style type="text/css">
-	html {background-color: black;}
-	#page {width: 975px; margin: 50px auto; text-align:center;}
-	#page a {padding: 20px;}
-	h1 {display:none;}
-	</style>
+    <link rel="icon" href="/images/descargas/favicon.ico" type="image/x-icon">
+    <%= stylesheet_link_tag 'discos' %>
 <% end %>
 
 <div id="page">
-	<a href="http://www.archive.org/download/LasBuenasNoches-2008-AventurasDomesticas/LBN-2008-Aventuras.zip"
-		class="download" id="descargas-aventuras"
-		onClick="recordOutboundLink(this, 'Descargas', 'Aventuras');return false;">
-		<h1>Aventuras Domésticas - 2008</h1>
-		<img src="/images/descargas/aventuras_cover.jpg" width="350" height="350" />
-		</a>
-	<a href="http://www.archive.org/download/LasBuenasNoches-2011-UnMalDia/LBN-2011-UnMalDia.zip"
-		class="download" id="descargas-unmaldia"
-		onClick="recordOutboundLink(this, 'Descargas', 'UnMalDia');return false;">
-	
-		<h1>Un Mal Día (lo tiene cualquiera) - 2011</h1>
-		<img src="/images/descargas/unmaldia_cover.jpg" width="350" height="350" />
-		</a>
+  <div class="row">
+    <div class="col aventuras">
+      <img src="/images/descargas/aventuras-cd.png" width="400" height="201">
+
+      <a href="http://www.archive.org/download/LasBuenasNoches-2011-UnMalDia/LBN-2011-UnMalDia.zip"
+         class="descarga-directa" id="descargas-unmaldia"
+         onClick="recordOutboundLink(this, 'Descargas', 'UnMalDia');return false;">
+        <img src="/images/descargas/descarga-directa.png" width="150" height="77"></a>
+      <a class="escucha-online" href="http://lasbuenasnoches.bandcamp.com/album/un-mal-d-a-lo-tiene-cualquiera" target="_blank">
+        <img src="/images/descargas/escucha-online.png" width="150" height="77"></a>
+
+      <h2>Aventuras Domésticas</h2>
+
+      <div class="info date">(2008)</div>
+      <div class="quotes">
+        <p><b>Aventuras domésticas</b> queda ya en mi imaginario como otra evidencia de que ciertas anomalías de antaño -la
+          búsqueda de la originalidad muy por encima del perezoso factor mimético, la reinvención a partir de materiales
+          poco reivindicados por el pop español- resultan cada vez, afortunadamente, menos extrañas.</p>
+
+        <p>Trabajo de entramado armónico cautivador -aquí la instrumentación clásica de un disco de rock
+          comparte espacio con el charango, el dobro, el ukelele, el xilófono y los pianitos de juguetes- y de las
+          letras con lecturas múltiples, Aventuras domésticas se sobrepone al desgaste de las escuchas consecutivas:
+          crece cada una nueva.</p>
+      </div>
+      <div class="info source">
+        <span class="author">Blas Fernández</span>, Diario de Sevilla
+      </div>
+    </div>
+    <div class="col venta">
+      <img src="/images/descargas/venta-de-discos.png" width="300" height="153">
+
+      <h2>PUNTOS DE VENTA</h2>
+
+      <h3>SEVILLA</h3>
+      <ul>
+        <li><b>Librerías la fuga</b>
+          c/Conde de Torrejón, 4
+        </li>
+        <li>
+          <b>Puesto de Bea</b>
+          Mercadillo del Jueves, c/Feria
+        </li>
+      </ul>
+
+      <h3>MADRID</h3>
+      <ul>
+        <li><b>Madrid Cómics</b>c/Silva, 17</li>
+        <li><b>Librería Antonio Machado</b>c/San Joaquin, 3</li>
+        <li><b>Bajo el Volcán</b>c/Ave María, 42</li>
+        <li><b>La Buena Bida</b>c/Vergara, 10</li>
+        <li><b>La independiente</b>c/Espíritu Santo, 27</li>
+      </ul>
+
+      <h3>BARCELONA</h3>
+      <ul>
+        <li><b>Freaks</b>c/Ali Bei, 10</li>
+        <li><b>Arkham Comics</b>c/Xuclà, 16</li>
+      </ul>
+    </div>
+    <div class="col un-mal-dia">
+      <img src="/images/descargas/unmaldia-vinilo.png" width="400" height="227">
+
+      <div class="editado">&bull; EDITADO EN FORMATO VINILO Y CD &bull;</div>
+      <img src="/images/descargas/unmaldia-cd.png" width="400" height="204">
+      <a href="http://www.archive.org/download/LasBuenasNoches-2008-AventurasDomesticas/LBN-2008-Aventuras.zip"
+         class="download" id="descargas-aventuras"
+         onClick="recordOutboundLink(this, 'Descargas', 'Aventuras');return false;">
+        <img src="/images/descargas/descarga-directa.png" width="150" height="77" ></a>
+      <a href="http://lasbuenasnoches.bandcamp.com/album/aventuras-dom-sticas" target="_blank">
+        <img src="/images/descargas/escucha-online.png" width="150" height="77"></a>
+
+      <h2>Un Mal Día -lo tiene cualquiera-</h2>
+
+      <div class="info date">(2011)</div>
+      <div class="quotes">
+        <p><b>Un mal día...</b> sigue en la ruta marcada por el debut del quinteto sevillano (Aventuras Domésticas, 2008),
+          afina más el acabado de los temas, profundiza en la multiinstrumentación y nos pasea por sonoridades a
+          menudo lejanas, de lejanos crepúsculos...
+        </p>
+      </div>
+      <div class="info source">
+        <span class="author">Ignasi Moya</span>, La Vanguardia
+      </div>
+    </div>
+  </div>
 </div>
