@@ -9,7 +9,7 @@ h1, h2, h3 {margin: 0; padding:  0;}
 h1 {display: none;}
 h2 {margin-top: 20px;;}
 h3 {color: #9b4b4a; margin-top: 30px; font-size: 90%;}
-
+a {color: #333333; text-decoration: none;}
 
 ul {margin: 10px 0; padding: 0; font-size: 17px;}
 ul li {margin: 10px 0; padding: 0; list-style: none; color: #664b40; }
@@ -24,6 +24,11 @@ ul li b {display: block; color: black; font-weight: normal;}
     width: 100%;
     overflow: hidden;
 }
+
+.row.shop {
+    margin-top: 80px;
+}
+.row.shop p {width: 80%; margin: 5px auto; font-size: 80%;}
 
 .col {
     float: left;
